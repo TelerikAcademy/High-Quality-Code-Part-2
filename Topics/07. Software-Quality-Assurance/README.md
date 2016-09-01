@@ -4,11 +4,10 @@
 ## Planning and Tracking Software Quality
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic00.png" style="top:18.51%; left:8.42%; width:18.52%; z-index:-1" /> -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic01.png" style="top:52.01%; left:68.30%; width:35.50%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic02.png" style="top:60.83%; left:4.68%; width:47.33%; z-index:-1" /> -->
 <article class="signature">
-	<p class="signature-course"></p>
-	<p class="signature-initiative"></p>
-	<a href="" class="signature-link"></a>
+	<p class="signature-course">High-Quality Code - Part 2</p>
+	<p class="signature-initiative">Telerik Software Academy</p>
+	<a href="https://telerikacademy.com" class="signature-link">https://telerikacademy.com</a>
 </article>
 
 
