@@ -1,18 +1,21 @@
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-title', showInPresentation:true, hasScriptWrapper:true } -->
-# Defensive Programming, Assertions and Exceptions
-## “Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots.So far, the Universe is winning.”
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic00.png" style="top:10.97%; left:5.61%; width:12.09%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic01.png" style="top:52.66%; left:64.42%; width:38.41%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic02.png" style="top:49.93%; left:58.79%; width:17.08%; z-index:-1" /> -->
+# Defensive Programming, Assertions and Exceptions  
+
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic01.png" style="top:60%; left:62%; width:38.41%; z-index:-1; border: 1px solid white; border-radius: 5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic02.png" style="top:15%; left:2%; width:17.08%; z-index:-1" /> -->
 <article class="signature">
-	<p class="signature-course">High-Quality Code</p>
+	<p class="signature-course">High-Quality Code - Part II</p>
 	<p class="signature-initiative">Telerik Software Academy</p>
 	<a href="http://academy.telerik.com " class="signature-link">http://academy.telerik.com </a>
 </article>
 
 
+<!-- section start -->
+# Defensive programming
+“Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.”   
 
+\- Rick Cook, The Wizardry Compiled
 
 <!-- section start -->
 <!-- attr: { id:'', showInPresentation:true, hasScriptWrapper:true } -->
@@ -31,29 +34,30 @@
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Defensive Programming -->
 <!-- ## Using Assertions and Exceptions Correctly -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic05.png" style="top:42.96%; left:8.07%; width:40.55%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic06.png" style="top:43.20%; left:55.79%; width:45.84%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic05.png" style="top:42.96%; left:8.07%; width:39%; z-index:-1; border: 1px solid white; border-radius: 5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic06.png" style="top:43.20%; left:55.79%; width:45%; z-index:-1; border: 1px solid white; border-radius: 5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # What is Defensive Programming?
   - Similar to defensive driving – you are never sure what other drivers will do
-  - **Expect incorrect input**and handle it correctly
-  - Think not only about the usual execution flow, but consider also unusual situations
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic07.png" style="top:26.68%; left:32.05%; width:45.40%; z-index:-1" /> -->
+  - **Expect incorrect input** and handle it correctly
+  - Think not only about the usual execution flow, but consider also **unusual** situations!
+
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic07.png" style="top:64%; left:30%; width:40%; z-index:-1; border: 1px solid white; border-radius: 5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Protecting from Invalid Input
+# Protecting from <br/> Invalid Input
 - “Garbage in &rarr; garbage out” – **Wrong!**
   - Garbage in &rarr; nothing out / exception out / error message out / no garbage allowed in
 - Check the values of all data from external sources (from user, file, internet, DB, etc.)
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic08.png" style="top:44.74%; left:9.47%; width:52.77%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic09.png" style="top:61.49%; left:50.40%; width:50.37%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic08.png" style="top:63%; left:2%; width:52.77%; z-index:-1; border: 1px solid black; border-radius: 5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic09.png" style="top:76%; left:50%; width:50.37%; z-index:-1; border: 1px solid black; border-radius: 5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Protecting from Invalid Input -->
+<!-- # Protecting from <br/> Invalid Input -->
 - Check the values of all **routine input parameters**
 - Decide how to handle **bad inputs**
   - Return neural value
@@ -69,8 +73,8 @@
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Assertions -->
 <!-- ## Checking Preconditions and Postconditions -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic10.png" style="top:15.87%; left:20.58%; width:30.85%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic11.png" style="top:17.63%; left:65.50%; width:25.56%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic10.png" style="top:45%; left:20%; width:30.85%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic11.png" style="top:45%; left:60%; width:25.56%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -89,21 +93,38 @@ public double GetAverageStudentGrade()
 }
 ```
 
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic12.png" style="top:62.92%; left:81.40%; width:24.13%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic12.png" style="top:30%; left:85%; width:24.13%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Assertions -->
-  - Use assertions for conditions that **should never occur**in practice
-    - Failed assertion indicates a **fatal error**in the program (usually unrecoverable)
-- Use assertions to **document assumptions**made in code (preconditions & postconditions)
+  - Use assertions for conditions that **should never occur** in practice
+    - Failed assertion indicates a **fatal error** in the program (usually unrecoverable)
+- Use assertions to **document assumptions** made in code (preconditions & postconditions)  
 
+```cs
+private Student GetRegisteredStudent(int id)
+{
+		Debug.Assert(id > 0);
+		Student student = registeredStudents[id];
+		Debug.Assert(student.IsRegistered);
+}
+```
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Assertions -->
-  - Failed assertion indicates a **fatal error**in the program (usually unrecoverable)
-- Avoid putting executable code in assertions
+  - Failed assertion indicates a **fatal error** in the program (usually unrecoverable)
+- Avoid putting executable code in assertions  
+
+```cs
+Debug.Assert(PerformAction(), "Could not perform action");
+```   
   - Won’t be compiled in production. Better use:
+
+```cs
+bool actionPerformed = PerformAction();
+Debug.Assert(actionPerformed, "Could not perform action");
+```
   - Assertions should fail loud
     - It is fatal error &rarr; total crash
 
@@ -111,7 +132,7 @@ public double GetAverageStudentGrade()
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
 # Assertions
 ## [Demo]()
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic13.png" style="top:11.92%; left:31.81%; width:45.84%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic13.png" style="top:18%; left:0%; width:40%; z-index:-1" /> -->
 
 
 
@@ -119,8 +140,8 @@ public double GetAverageStudentGrade()
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Exceptions -->
-- Best Practices for Exception Handling
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic14.png" style="top:37.91%; left:30.93%; width:47.60%; z-index:-1" /> -->
+## Best Practices for Exception Handling
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic14.png" style="top:55%; left:30%; width:40%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -162,8 +183,8 @@ void PlayNextTurn()
 }
 ```
 
-<div class="fragment balloon" style="top:22.41%; left:40.55%; width:35.26%">Exception thrown here</div>
-<div class="fragment balloon" style="top:34.57%; left:43.20%; width:52.01%">The code here will not be executed</div>
+<div class="fragment balloon" style="top:55%; left:40.55%; width:35.26%">Exception thrown here</div>
+<div class="fragment balloon" style="top:70%; left:43.20%; width:52.01%">The code here will not be executed</div>
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -184,8 +205,8 @@ void PlayNextTurn()
 }
 ```
 
-<div class="fragment balloon" style="top:31.78%; left:22.04%; width:37.91%">Exceptions can be eventually thrown here</div>
-<div class="fragment balloon" style="top:46.26%; left:27.33%; width:49.37%">The code here is always executed</div>
+<div class="fragment balloon" style="top:60%; left:22.04%; width:37.91%">Exceptions can be eventually thrown here</div>
+<div class="fragment balloon" style="top:78%; left:27.33%; width:49.37%">The code here is always executed</div>
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -204,50 +225,86 @@ void PlayNextTurn()
 ```cs
 class Employee
 {
+	// Bad
   …
   public TaxId
   { get { throw new NullReferenceException(…); }
 }
 ```
-
-
+```cs
+class Employee
+{
+	// Better
+  …
+  public TaxId
+  { get { throw new EmployeeDataNotAvailable(…); }
+}
+```
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Exceptions -->
 - Use **descriptive error messages**
   - Incorrect example:
+	```cs
+	throw new Exception("Error!");
+	```
   - _Example_:
+	```cs
+	throw new ArgumentException("The speed should be a number " +
+  "between " + MIN_SPEED + " and " + MAX_SPEED + ".");
+	```
   - Avoid **empty catch blocks**
+	```cs
+	try
+{
+  …
+}
+catch (Exception ex)
+{
+}
+	```
 
-```cs
-throw new Exception("Error!");
-```
+
 
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Exceptions -->
 - Always include the exception **cause** when throwing a new exception
-<div class="fragment balloon" style="top:67.37%; left:45.84%; width:47.60%">We chain the original exception (the source of the problem)</div>
+```cs
+try
+{
+  	WithdrawMoney(account, amount);
+}
+catch (DatabaseException dbex)
+{
+	  throw new WithdrawException(String.Format(
+	    "Can not withdraw the amount {0} from acoount {1}",
+	    amount, account), dbex);
+}
+```
+<div class="fragment balloon" style="top:70%; left:45.84%; width:47.60%">We chain the original exception (the source of the problem)</div>
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Exceptions -->
 - Catch only exceptions that you are capable to process correctly
   - Do not catch all exceptions!
-  - Incorrect example:
+  - Incorrect example:  
+
+	```cs
+	try
+	{
+	  ReadSomeFile();
+	}
+	catch
+	{
+	  Console.WriteLine("File not found!");
+	}
+	```  
+
   - What about **OutOfMemoryException**?
 
-```cs
-try
-{
-  ReadSomeFile();
-}
-catch
-{
-  Console.WriteLine("File not found!");
-}
-```
 
 
 
@@ -256,29 +313,28 @@ catch
 - Have an exception handling strategy for all unexpected / unhandled exceptions:
   - Consider logging (e.g. Log4Net)
   - Display to the end users only messages that they could understand
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic15.png" style="top:48.48%; left:3.74%; width:48.48%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic16.png" style="top:48.59%; left:61.26%; width:44.55%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic15.png" style="top:55%; left:3.74%; width:48.48%; z-index:-1; border: 1px solid black; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic16.png" style="top:55%; left:61.26%; width:44.55%; z-index:-1; border: 1px solid black; border-radius:5px;" /> -->
 
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
 # Exceptions
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic17.png" style="top:40.88%; left:37.87%; width:34.38%; z-index:-1" /> -->
-
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic17.png" style="top:42%; left:33%; width:34.38%; z-index:-1; border: 1px solid black; border-radius:5px;" /> -->
 
 
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Error Handling Strategies -->
-<!-- ## Assertions vs. Exceptions vs. Other Techniques  -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic18.png" style="top:44.83%; left:72.02%; width:23.20%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic19.png" style="top:46.47%; left:46.09%; width:17.63%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic20.png" style="top:44.08%; left:15.21%; width:23.25%; z-index:-1" /> -->
+## Assertions vs. Exceptions vs. Other Techniques
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic18.png" style="top:57%; left:72.02%; width:23.20%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic19.png" style="top:57%; left:46.09%; width:17.63%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic20.png" style="top:57%; left:15.21%; width:23.25%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Error Handling Techniques
-- How to handle **errors that you expect**to occur?
+- How to handle **errors that you expect** to occur?
   - Depends on the situation:
     - Throw an **exception** (in OOP)
       - The most typical action you can do
@@ -294,10 +350,10 @@ catch
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Assertions vs. Exceptions
-- **Exceptions**are announcements about error condition or unusual event
+- **Exceptions** are announcements about error condition or unusual event
   - Inform the caller about error or exceptional event
   - Can be caught and application can continue working
-- **Assertions**are fatal errors
+- **Assertions** are fatal errors
   - Assertions always indicate bugs in the code
   - Can not be caught and processed
   - Application can’t continue in case of failed assertion
@@ -309,7 +365,7 @@ catch
 - Assertions in C# are rarely used
   - In C# prefer throwing an **exception** when the input data / internal object state are invalid
     - Exceptions are used in C# and Java instead of **preconditions checking**
-  - Prefer using **unit testing**for testing the code instead of **postconditions checking**
+  - Prefer using **unit testing** for testing the code instead of **postconditions checking**
 - Assertions are popular in C / C++
   - Where exceptions & unit testing are not popular
 - In JS there are no built-in assertion mechanism
@@ -317,7 +373,7 @@ catch
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Error Handling Strategy
-- Choose your **error handling strategy**and follow it consistently
+- Choose your **error handling strategy** and follow it consistently
   - Assertions / exceptions / error codes / other
 - In C#, .NET and OOP prefer using **exceptions**
   - Assertions are rarely used, only as additional checks for fatal error
@@ -361,8 +417,8 @@ public string Substring(string str, int startIndex, int length)
 ```
 
 <div class="fragment balloon" style="top:34.62%; left:66.12%; width:29.09%">Check the input and preconditions</div>
-<div class="fragment balloon" style="top:64.79%; left:20.28%; width:46.72%">Perform the method main logic</div>
-<div class="fragment balloon" style="top:65.50%; left:73.17%; width:24.68%">Check the postconditions</div>
+<div class="fragment balloon" style="top:75%; left:20.28%; width:46.72%">Perform the method main logic</div>
+<div class="fragment balloon" style="top:85%; left:55%; width:24.68%">Check the postconditions</div>
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -374,10 +430,8 @@ public string Substring(string str, int startIndex, int length)
   - Consider using exceptions for public methods and assertions for private
 - **public methods / functions**
 - **private methods / functions**
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic21.png" style="top:22.14%; left:14.97%; width:13.46%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic22.png" style="top:22.35%; left:84.29%; width:10.50%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic23.png" style="top:24.16%; left:40.83%; width:7.61%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic24.png" style="top:24.41%; left:65.50%; width:6.36%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic21.png" style="top:20%; left:100%; width:13.46%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic22.png" style="top:40%; left:100%; width:10.50%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
