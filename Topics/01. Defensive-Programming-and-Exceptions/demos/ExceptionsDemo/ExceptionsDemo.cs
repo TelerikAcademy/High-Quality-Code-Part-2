@@ -5,6 +5,7 @@ class ExceptionsDemo
     static void Main()
     {
         string s = Console.ReadLine();
+
         try
         {
             Int32.Parse(s);

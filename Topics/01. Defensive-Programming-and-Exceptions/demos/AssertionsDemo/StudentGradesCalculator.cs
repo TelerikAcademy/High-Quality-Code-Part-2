@@ -13,7 +13,7 @@ class StudentGradesCalculator
 
     public double GetAverageStudentGrade()
     {
-        Debug.Assert(studentGrades == null && studentGrades.Count > 0,
+        Debug.Assert(studentGrades != null && studentGrades.Count > 0,
             "Student grades are not initialized!");
 
         return studentGrades.Average();

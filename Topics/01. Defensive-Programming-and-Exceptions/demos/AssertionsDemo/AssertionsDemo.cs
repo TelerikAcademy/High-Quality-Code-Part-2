@@ -4,12 +4,6 @@ using System.Linq;
 
 class AssertionsDemo
 {
-    private static bool PerformAction()
-    {
-        Console.WriteLine("Action performed.");
-        return true;
-    }
-
     static void Main()
     {
         Debug.Assert(PerformAction(), "Could not perform action");
@@ -19,5 +13,11 @@ class AssertionsDemo
 
         calc = new StudentGradesCalculator(new int[] { });
         Console.WriteLine(calc.GetAverageStudentGrade());
+    }
+
+    private static bool PerformAction()
+    {
+        Console.WriteLine("Action performed.");
+        return true;
     }
 }
