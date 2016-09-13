@@ -165,8 +165,8 @@
 # IntelliTrace
 - IntelliTrace operates in the background, records what you are doing during debugging
 - You can easily get a past state of your application from the IntelliTrace
-- You can navigate yourcode with any part andsee what’s happened
-  - To navigate, just clickany of the events thatyou want to explore
+- You can navigate your code with any part and see what’s happened
+  - To navigate, just click any of the events that you want to explore
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic13.png" style="top:39.67%; left:61.75%; width:42.81%; z-index:-1" /> -->
 
 
