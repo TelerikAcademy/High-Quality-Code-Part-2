@@ -243,7 +243,7 @@
 # Code Smells: Change Preventers
 - Conditional complexity
   - Cyclomatic complexity
-    - number of unique pathsthat the code can be evaluated
+    - number of unique paths that the code can be evaluated
   - Symptoms: deep nesting (arrow code) & bug ifs
   - Solutions: extract method, strategy pattern, state pattern, decorator
 - Poorly written tests
@@ -303,7 +303,7 @@
 <!-- # Code Smells: The Couplers -->
 - Message chains
   - Somemthing.another.someother.other.another
-  - Tight coupling between client andthe structure of the navigation
+  - Tight coupling between client and the structure of the navigation
 - Middle man
   - Sometimes delegation goes too far
   - Sometimes we can remove it or inline it
@@ -367,7 +367,7 @@
 - Move a complex boolean expression into a well-named boolean function
 - Consolidate duplicated code in conditionals
 - Return as soon as you know the answer instead of assigning a return value
-- Use break or return instead ofa loop control variable
+- Use break or return instead of a loop control variable
 - Replace conditionals with polymorphism
 - Use null objects instead of testing for nulls
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic18.png" style="top:40.65%; left:82.78%; width:21.63%; z-index:-1" /> -->
@@ -379,7 +379,7 @@
 - Rename method
 - Convert a long routine to a class
 - Add / remove parameter
-- Combine similar methods byparameterizing them
+- Combine similar methods by parameterizing them
 - Substitute a complex algorithm with simpler
 - Separate methods whose behavior depends on parameters passed in (create new ones)
 - Pass a whole object rather than specific fields
@@ -389,7 +389,7 @@
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Class Level Refactorings
-- Change structure toclass and vice versa
+- Change structure to class and vice versa
 - Pull members up / pushmembers down the hierarchy
 - Extract specialized code into a subclass
 - Combine similar code into a superclass
@@ -469,7 +469,7 @@
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Rafactoring Patterns -->
+<!-- # Refactoring Patterns -->
 - Refactoring patterns
   - Two classes are tightly coupled &rarr; merge them or redesign them to separate their responsibilities
   - Public non-constant fields &rarr; make them private and define accessing properties
