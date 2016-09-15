@@ -17,7 +17,7 @@
 # Table of Contents
 - Computer Performance
 - Code Tuning
-- JustTrace
+- dotTrace
 - C# Optimizations
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic05.png" style="top:14.93%; left:66.36%; width:30.03%; z-index:-1" /> -->
 
