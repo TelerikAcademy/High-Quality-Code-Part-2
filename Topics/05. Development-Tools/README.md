@@ -1,13 +1,14 @@
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-title', showInPresentation:true, hasScriptWrapper:true } -->
 # Development Tools
-## Integrated Development Environments, Source Control Repositories, Automated Testing Tools, Bug Tracking, Code Analysis Tools, Build Tools,Project Hosting Sites, Deployment in the Cloud
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic00.png" style="top:53.77%; left:79.53%; width:24.68%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic01.png" style="top:55.22%; left:54.27%; width:18.51%; z-index:-1" /> -->
+## IDEs, Source Control Repositories, Automated Testing Tools, Bug Tracking, Code Analysis Tools, Build Tools, Project Hosting Sites, Deployment in the Cloud
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic00.png" style="top:70%; left:80%; width:24.68%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic01.png" style="top:78%; left:55%; width:18.51%; z-index:-1" /> -->
+
 <article class="signature">
-	<p class="signature-course">High-Quality Code</p>
+	<p class="signature-course">High-Quality Code - Part II</p>
 	<p class="signature-initiative">Telerik Software Academy</p>
-	<a href="http://academy.telerik.com " class="signature-link">http://academy.telerik.com </a>
+	<a href="http://academy.telerik.com " class="signature-link">http://academy.telerik.com</a>
 </article>
 
 
@@ -24,7 +25,8 @@
 - Bug Tracking / Issue Tracking Systems
 - Code Analysis Tools
 - Code Decompilation Tools
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic02.png" style="top:27.33%; left:72.24%; width:31.29%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic02.png" style="top:27.33%; left:72.24%; width:31.29%; z-index:-1; border:1px solid white; border-radius:5px;" /> -->
+
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -36,30 +38,33 @@
 - Continuous Integration Tools
 - Documentation Generators
 - Deployment in the Public Clouds
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic03.png" style="top:13.36%; left:78.71%; width:21.05%; z-index:-1" /> -->
-
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic03.png" style="top:13.36%; left:78.71%; width:21.05%; z-index:-1; border:1px solid white; border-radius:5px;" /> -->
 
 
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- <!-- # Integrated Development Environments (ID --> -->
-<!-- ## Visual Studio, Eclipse, IntelliJ IDEA, Netbeans, JDeveloper, Code::Blocks, Bloodshed Dev-C++ -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic04.png" style="top:19.33%; left:60.59%; width:40.43%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic05.png" style="top:11.82%; left:53.38%; width:16.62%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic06.png" style="top:6.17%; left:68.07%; width:29.77%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic07.png" style="top:15.31%; left:26.15%; width:28.06%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic08.png" style="top:7.09%; left:34.39%; width:21.59%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic09.png" style="top:10.51%; left:11.00%; width:19.17%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic10.png" style="top:29.89%; left:5.61%; width:24.76%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic11.png" style="top:33.53%; left:41.04%; width:15.77%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic12.png" style="top:20.09%; left:8.19%; width:14.10%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic13.png" style="top:11.99%; left:95.21%; width:10.49%; z-index:-1" /> -->
+<!--  # Integrated Development Environments (IDEs)
+## Visual Studio, Eclipse, IntelliJ IDEA, Netbeans, JDeveloper, Code::Blocks, Bloodshed Dev-C++ -->
+
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic06.png" style="top:14%; left:70%; width:29.77%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic08.png" style="top:10%; left:30%; width:21.59%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic09.png" style="top:15%; left:5%; width:19.17%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic13.png" style="top:35%; left:100%; width:10.49%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic05.png" style="top:-10%; left:55%; width:16.62%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic07.png" style="top:76%; left:84%; width:28.06%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic04.png" style="top:82%; left:30%; width:40.43%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic12.png" style="top:52%; left:-15%; width:14.10%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic10.png" style="top:65%; left:-18%; width:24.76%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic11.png" style="top:80%; left:-7%; width:15.77%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+
+
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Visual Studio
-- **Visual Studio**is official .NET development tool from Microsoft
+- **Visual Studio** is official .NET development tool from Microsoft
   - Multiple languages: C#, VB.NET, F#, C++, …
   - Multiple technologies and platforms: ASP.NET, WPF, WiForms, Silverlight, WWF, WCF, iOS, Windows Mobile, Android, NodeJS, Xamarin…
   - Very powerful and feature rich
@@ -69,22 +74,22 @@
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Visual Studio – Screenshot
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic14.png" style="top:11.33%; left:2.30%; width:101.55%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic14.png" style="top:11.33%; left:2.30%; width:101.55%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
 # Visual Studio
 ## [Demo]() / Code Metrics / Code Duplicates
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic15.png" style="top:50.69%; left:6.55%; width:33.06%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic16.png" style="top:50.44%; left:54.16%; width:46.82%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic17.png" style="top:5.29%; left:75.38%; width:27.08%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic18.png" style="top:15.87%; left:6.55%; width:62.88%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic15.png" style="top:55%; left:6.55%; width:33.06%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic16.png" style="top:55%; left:54.16%; width:46.82%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic17.png" style="top:5.29%; left:75.38%; width:27.08%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Other IDEs
 - JavaScript IDEs
-  - WebStorm, Sublime Text, VS, Atom, _Note_pad++
+  - WebStorm, Sublime Text, VS, Atom, _Notepad++_
 - Java IDEs
   - Eclipse, Android Studio, NetBeans,IntelliJ IDEA, Jdeveloper
 - C++ IDEs
@@ -92,26 +97,21 @@
 - PHP IDEs – PHPStorm, Zend Studio, phpDesigner
 - Ruby – RubyMine
 - Objective C (iOS) – Xcode, AppCode
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic19.png" style="top:23.30%; left:90.20%; width:15.26%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic20.png" style="top:41.52%; left:90.34%; width:15.26%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic19.png" style="top:45%; left:92%; width:15.26%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic20.png" style="top:67%; left:92%; width:15.26%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
 
 
 
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Source Control Systems -->
-<!-- ## Subversion (SVN), Team Foundation Server (TFS), CVS, Git, Mercurial, Perforce, … -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic21.png" style="top:11.46%; left:70.17%; width:28.06%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic22.png" style="top:18.51%; left:37.83%; width:19.65%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic23.png" style="top:30.85%; left:43.98%; width:22.04%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic24.png" style="top:33.42%; left:24.29%; width:16.03%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic25.png" style="top:14.45%; left:9.36%; width:22.34%; z-index:-1" /> -->
+<!-- # Source Control Systems
+## Subversion (SVN), Team Foundation Server (TFS), CVS, Git, Mercurial, Perforce, … -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# What is Source Control System?
-- **Source control systems**(version control systems, source control repositories)
+# What is а Source <br/> Control System?
+- **Source control systems** (version control systems, source control repositories)
   - Hold the source code and project assets during the development process
   - Allow simultaneous changes in the source code and conflict resolution
   - Keep version history of the project assets
@@ -142,11 +142,12 @@
 - Mary resolves a merge conflict
 - Mary successfully publishes her feature
 - More info
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic26.png" style="top:24.68%; left:78.60%; width:28.49%; z-index:-1" /> -->
+
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic26.png" style="top:28%; left:80%; width:28.49%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Git: Feature Branch Workflow
+# Git: Feature Branch <br/> Workflow
 - Still uses a central repository
 - Developers create a new branch every time they start work on a new feature
   - Instead of committing directlyon their local master branch
@@ -154,8 +155,8 @@
 - This makes it possible to share a feature with other developers without touching official code
 - Branches make it possible to discuss changes via pull requests
 - More info
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic27.png" style="top:25.56%; left:72.14%; width:34.29%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic28.png" style="top:65.11%; left:58.95%; width:40.17%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic27.png" style="top:21%; left:72%; width:20%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic28.png" style="top:92%; left:55%; width:40%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -167,22 +168,22 @@
   - Master stores theofficial release history
   - Develop serves as anintegration for features
 - More info
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic29.png" style="top:45.84%; left:60.82%; width:44.96%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic29.png" style="top:70%; left:45%; width:44.96%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Git: Forking Workflow
-- Developers push to theirown server-side repositories
-- Only the project maintainercan push to the official repo
+- Developers push to their own server-side repositories
+- Only the project maintainer can push to the official repo
   - Allows the maintainer to accept commits from others without giving them write access
 - An ideal workflow for open source projects
 - Can be combined with other workflows
 - More info
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic30.png" style="top:11.63%; left:72.05%; width:32.80%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic30.png" style="top:18%; left:85%; width:25%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Subversion (S -->
+<!-- # Subversion (SVN) -->
 - **Subversion** (**SVN**)
   - Popular and well established system
   - Free, open-source, very large community
@@ -195,16 +196,16 @@
 - Console client - **svn**
 - GUI client
   - TortoiseSVN – http://tortoisesvn.tigris.org/
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic31.png" style="top:43.20%; left:73.92%; width:32.47%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic31.png" style="top:60%; left:65%; width:32.47%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # TortoiseSVN
 - TortoiseSVN
-  - Open source GUI client for Subversion
-  - Integrated in Windows Explorer
+  - Open source GUI <br/> client for Subversion
+  - Integrated in<br/> Windows Explorer
   - http://tortoisesvn.tigris.org/
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic32.png" style="top:17.63%; left:43.46%; width:58.50%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic32.png" style="top:18%; left:55%; width:45%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -230,17 +231,17 @@
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Team Foundation Server (T -->
+<!-- # Team Foundation Server <br/> (TFS) -->
 - Microsoft **Team Foundation Server** (**TFS**)
   - Works best with Visual Studio
     - Hard to use outside of it
   - Commercial license
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic33.png" style="top:42.31%; left:37.96%; width:67.38%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic34.png" style="top:42.31%; left:3.65%; width:30.94%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic33.png" style="top:52%; left:37.96%; width:67.38%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic34.png" style="top:52%; left:3.65%; width:30.94%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Other Source Control Systems
+# Other Source <br/> Control Systems
 - **CVS**
   - Was extremely popular in the past
     - Now it is obsolete
@@ -256,13 +257,13 @@
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Code Generation Tools -->
-<!-- ## Visual Studio T4 Engine, CodeSmith, AndroMDA -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic35.png" style="top:11.94%; left:29.94%; width:49.04%; z-index:-1" /> -->
+<!-- # Code Generation Tools
+## Visual Studio T4 Engine, CodeSmith, AndroMDA -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic35.png" style="top:18%; left:26%; width:49.04%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Code Generators – Concepts
+# Code Generators<br/>- Concepts
 - Source code generation
   - Template based
     - Build data access layer by given database schema
@@ -285,7 +286,7 @@
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Microsoft T4 Template Engine
+# Microsoft T4<br/> Template Engine
 - Visual Studio T4 Engine
   - T4 == Text Template Transformation Toolkit
   - Integral part of Visual Studio
@@ -299,10 +300,10 @@
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # T4 Template Engine – Architecture
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic36.png" style="top:18.10%; left:5.58%; width:95.23%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic36.png" style="top:20%; left:5.58%; width:95.23%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->ж
 # Visual Studio T4 _Example_
 
 ```cs
@@ -350,20 +351,16 @@ public int Item2 { get; set; }
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
 # Visual Studio T4 Template Engine
 ## [Demo]()
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic37.png" style="top:13.22%; left:68.30%; width:35.26%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic37.png" style="top:8%; left:70%; width:35.26%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
 
 
 
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Logging Tools -->
-<!-- ## Log4J, Log4Net -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic38.png" style="top:14.99%; left:34.15%; width:40.99%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic39.png" style="top:33.50%; left:70.17%; width:16.75%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic40.png" style="top:11.77%; left:19.30%; width:17.97%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic41.png" style="top:11.55%; left:59.15%; width:33.17%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic42.png" style="top:42.22%; left:14.69%; width:28.20%; z-index:-1" /> -->
+<!-- # Logging Tools  
+## Log4J, Log4Net -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic38.png" style="top:53%; left:30%; width:40.99%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -387,7 +384,7 @@ public int Item2 { get; set; }
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Log4j / Log4Net Architecture
+# Log4j / Log4Net<br/> Architecture
 - Log4Net has three main components: loggers, appenders and layouts
   - **Loggers**
     - Channels for printing logging information
@@ -399,7 +396,6 @@ public int Item2 { get; set; }
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Hello Log4Net – _Example_
-- Output from Log4Net_Example_
 
 ```cs
 class Log4Net_Example_
@@ -415,6 +411,8 @@ class Log4Net_Example_
 }
 ```
 
+- Output from Log4Net _Example_   
+
 
 ```cs
 2010-12-16 23:25:08 DEBUG Log4Net_Example_ – Debug msg
@@ -427,26 +425,22 @@ class Log4Net_Example_
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
 # Log4Net
 ## [Demo]()
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic43.png" style="top:38.79%; left:74.85%; width:16.75%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic44.png" style="top:42.31%; left:16.84%; width:42.64%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic45.png" style="top:11.82%; left:31.81%; width:42.64%; z-index:-1" /> -->
-
 
 
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Unit Testing Tools -->
-<!-- ## JUnit, NUnit, CppUnit, TestNG, JsUnit, … -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic46.png" style="top:6.17%; left:66.43%; width:32.95%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic47.png" style="top:53.77%; left:16.84%; width:25.17%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic48.png" style="top:14.10%; left:10.94%; width:32.68%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic49.png" style="top:56.42%; left:65.50%; width:21.67%; z-index:-1" /> -->
+<!-- # Unit Testing Tools
+## JUnit, NUnit, CppUnit, TestNG, JsUnit, … -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic46.png" style="top:3%; left:66.43%; width:25%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic47.png" style="top:53.77%; left:16.84%; width:25.17%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic48.png" style="top:11%; left:25%; width:32.68%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic49.png" style="top:56.42%; left:65.50%; width:21.67%; z-index:-1;border:1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Unit Testing
-- **Unit test**is a program that tests pieces of code
+- **Unit test** is a piece of software code that tests another pieces of code
   - Test a single method, class or component
   - Implement a common use case scenario
   - Confirm that the code works as expected
@@ -477,11 +471,10 @@ void testSum() {
 }
 ```
 
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic50.png" style="top:17.85%; left:87.95%; width:11.95%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Unit Testing Frameworks / Tools
+# Unit Testing Frameworks / <br/> Tools
 - **Unit testing frameworks**
   - Simplify design, implementation and execution of unit tests
 - Popular unit testing frameworks
@@ -492,8 +485,8 @@ void testSum() {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Code Coverage & Mocking Tools
-- **Code coverage**tools
+# Code Coverage & <br/> Mocking Tools
+- **Code coverage** tools
   - Code coverage tools check what portion of the source code is covered by the unit tests
   - CodeCover for Eclipse – for Java
   - Visual Studio Team Suite – for C#
@@ -518,10 +511,11 @@ void testSum() {
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Bug Tracking / Issue Tracking Systems -->
-<!-- ## TRAC, Bugzilla, JIRA, TFS, SourceForge, CodePlex, Project Locker, GitHub, TeamPulse -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic51.png" style="top:13.22%; left:60.35%; width:28.65%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic52.png" style="top:13.22%; left:16.46%; width:35.36%; z-index:-1" /> -->
+<!-- # Bug Tracking / Issue Tracking Systems
+## TRAC, Bugzilla, JIRA, TFS, SourceForge, CodePlex, Project Locker, GitHub, TeamPulse -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic51.png" style="top:13.22%; left:60.35%; width:28.65%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic52.png" style="top:13.22%; left:16.46%; width:35.36%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
+
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -550,10 +544,10 @@ void testSum() {
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Code Analysis Tools -->
-<!-- ## FxCop, StyleCop, Checkstyle, devAdvantage, FindBugs, BoundsChecker, …  -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic53.png" style="top:46.61%; left:10.29%; width:33.06%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic54.png" style="top:46.61%; left:49.02%; width:49.90%; z-index:-1" /> -->
+<!-- # Code Analysis Tools
+## FxCop, StyleCop, Checkstyle, devAdvantage, FindBugs, BoundsChecker, …  -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic53.png" style="top:46.61%; left:10.29%; width:33.06%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic54.png" style="top:46.61%; left:49.02%; width:49.90%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -563,7 +557,7 @@ void testSum() {
 - Static analysis
   - Examine the source code at compile-time
   - Could work with the source code or with the compiled assemblies / JAR archives
-  - _Example_s: JustCode, ReSharper, FxCop, VS
+  - _Examples_: JustCode, ReSharper, FxCop, VS
 - Dynamic analysis
   - Analyses the code at runtime (usually done by **code instrumentation**) (profiling, tracing)
 
@@ -580,8 +574,8 @@ void testSum() {
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Code Decompilation Tools -->
-<!-- ## JustDecompile, ILSpy -->
+<!-- # Code Decompilation Tools
+## JustDecompile, ILSpy -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic58.png" style="top:14.97%; left:62.51%; width:36.31%; z-index:-1" /> -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic59.png" style="top:14.97%; left:12.76%; width:34.13%; z-index:-1" /> -->
 
@@ -709,8 +703,8 @@ return ____;
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Code Profilers -->
-<!-- ## ANTS Profiler for .NET, YourKit Profiler for .NET, Netbeans Profiler for Java, JProfiler, JProbe -->
+<!-- # Code Profilers
+## ANTS Profiler for .NET, YourKit Profiler for .NET, Netbeans Profiler for Java, JProfiler, JProbe -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic67.png" style="top:41.43%; left:22.15%; width:23.97%; z-index:-1" /> -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic68.png" style="top:41.43%; left:56.08%; width:37.08%; z-index:-1" /> -->
 
@@ -739,8 +733,8 @@ return ____;
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Refactoring Tools -->
-<!-- ## JustCode, ReSharper, CodeMaid, IntelliJ IDEA, Visual Studio, Eclipse, Netbeans, JDeveloper -->
+<!-- # Refactoring Tools
+## JustCode, ReSharper, CodeMaid, IntelliJ IDEA, Visual Studio, Eclipse, Netbeans, JDeveloper -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic70.png" style="top:16.75%; left:33.68%; width:43.20%; z-index:-1" /> -->
 
 
@@ -766,8 +760,8 @@ return ____;
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Automated Build Tools -->
-<!-- ## CMake, Ant, Maven, MSBuild -->
+<!-- # Automated Build Tools
+## CMake, Ant, Maven, MSBuild -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic72.png" style="top:15.87%; left:69.94%; width:26.67%; z-index:-1" /> -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic73.png" style="top:15.87%; left:12.16%; width:46.46%; z-index:-1" /> -->
 
@@ -811,8 +805,8 @@ return ____;
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Continuous Integration Tools -->
-<!-- ## CruiseControl, CruiseControl.NET, Hudson, Team Foundation Server, AppVeyor -->
+<!-- # Continuous Integration Tools
+## CruiseControl, CruiseControl.NET, Hudson, Team Foundation Server, AppVeyor -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic74.png" style="top:11.35%; left:33.74%; width:43.41%; z-index:-1" /> -->
 
 
@@ -859,8 +853,8 @@ return ____;
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Documentation Generators -->
-<!-- ## Javadoc, Sandcastle, Doxygen, JSDoc -->
+<!-- # Documentation Generators
+## Javadoc, Sandcastle, Doxygen, JSDoc -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic75.png" style="top:10.58%; left:37.89%; width:33.06%; z-index:-1" /> -->
 
 
@@ -890,8 +884,8 @@ return ____;
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Project Deploymentin the Public Clouds -->
-<!-- ## AWS, GAE, Azure, AppHarbor, PHPFog, … -->
+<!-- # Project Deployment in the Public Clouds
+ ## AWS, GAE, Azure, AppHarbor, PHPFog, … -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic76.png" style="top:3.23%; left:63.62%; width:39.82%; z-index:-1" /> -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic77.png" style="top:3.23%; left:50.84%; width:33.13%; z-index:-1" /> -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic78.png" style="top:3.53%; left:26.20%; width:36.14%; z-index:-1" /> -->
@@ -931,7 +925,7 @@ return ____;
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Free Trainings @ Telerik Academy
 - C# Programming @ Telerik Academy
-    - [HQC-Part 1 course](http://academy.telerik.com/student-courses/programming/high-quality-code-part-2/about)
+    - [HQC - Part II course](http://academy.telerik.com/student-courses/programming/high-quality-code-part-2/about)
   - Telerik Software Academy
     - [telerikacademy.com](https://telerikacademy.com)
   - Telerik Academy @ Facebook
