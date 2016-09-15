@@ -321,7 +321,7 @@ public int GetSize()
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # C# Optimization Tips -->
-- Instead of testing each case using logic, you can translate it through a **lookup****table**
+- Instead of testing each case using logic, you can translate it through a **lookup** **table**
   - It eliminates costly branches in your code
 - It is more efficient to work with a **char** instead of a single-char string
 - Use **JustDecompile** or any other decompilation tool to view the output IL code
