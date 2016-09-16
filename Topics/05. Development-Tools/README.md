@@ -565,9 +565,9 @@ void testSum() {
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
 # StyleCop
 ## [Demo]()
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic55.png" style="top:16.75%; left:71.11%; width:30.96%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic56.png" style="top:5.29%; left:31.81%; width:16.12%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic57.png" style="top:52.01%; left:19.65%; width:31.40%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic55.png" style="top:16.75%; left:71.11%; width:30.96%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic56.png" style="top:1%; left:31.81%; width:16.12%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic57.png" style="top:55%; left:19.65%; width:31.40%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 
@@ -576,8 +576,8 @@ void testSum() {
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Code Decompilation Tools
 ## JustDecompile, ILSpy -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic58.png" style="top:14.97%; left:62.51%; width:36.31%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic59.png" style="top:14.97%; left:12.76%; width:34.13%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic58.png" style="top:14.97%; left:56%; width:36.31%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic59.png" style="top:14.97%; left:13%; width:34.13%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -610,15 +610,15 @@ void testSum() {
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # JustDecompiler
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic60.png" style="top:12.34%; left:7.84%; width:91.02%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic60.png" style="top:12.34%; left:7.84%; width:91.02%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
 # JustDecompile & ILSpy
 ## [Demo]()
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic61.png" style="top:10.58%; left:36.49%; width:38.57%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic62.png" style="top:11.43%; left:22.42%; width:14.55%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic63.png" style="top:10.14%; left:76.42%; width:17.13%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic61.png" style="top:11%; left:32%; width:38.57%; z-index:-1"; border: 1px solid white; border-radius:5px; /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic62.png" style="top:11%; left:13%; width:14.55%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic63.png" style="top:11%; left:76%; width:17.13%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 
@@ -627,9 +627,9 @@ void testSum() {
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Code Obfuscators -->
 <!-- ## Making Reverse Engineering Difficult -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic64.png" style="top:48.26%; left:14.03%; width:22.26%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic65.png" style="top:48.48%; left:73.92%; width:20.63%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic66.png" style="top:41.76%; left:43.04%; width:23.47%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic64.png" style="top:48.26%; left:14.03%; width:22.26%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic65.png" style="top:48.48%; left:73.92%; width:20.63%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic66.png" style="top:41.76%; left:43.04%; width:23.47%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -643,7 +643,7 @@ void testSum() {
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Code Obfuscation Techniques
+# Code Obfuscation <br/> Techniques
 - Rewrite **for**-loops as **while**-loops followed by a series of cascading **if**-**else** statements
 - Change iteration into recursion
 - Obfuscate programming constructs (e.g. turn **if**-**else** statements into **?:** operators)
@@ -705,8 +705,8 @@ return ____;
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Code Profilers
 ## ANTS Profiler for .NET, YourKit Profiler for .NET, Netbeans Profiler for Java, JProfiler, JProbe -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic67.png" style="top:41.43%; left:22.15%; width:23.97%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic68.png" style="top:41.43%; left:56.08%; width:37.08%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic67.png" style="top:41.43%; left:22.15%; width:23.97%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic68.png" style="top:41.43%; left:56.08%; width:37.08%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -726,7 +726,7 @@ return ____;
   - Designed for code and memory profiling
   - Measures the **frequency** and **duration** of function calls
   - Collects information about **memory****usage**
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic69.png" style="top:40.55%; left:6.84%; width:92.89%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic69.png" style="top:50%; left:6.84%; width:92.89%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 
@@ -735,7 +735,7 @@ return ____;
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Refactoring Tools
 ## JustCode, ReSharper, CodeMaid, IntelliJ IDEA, Visual Studio, Eclipse, Netbeans, JDeveloper -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic70.png" style="top:16.75%; left:33.68%; width:43.20%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic70.png" style="top:13%; left:30%; width:43.20%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -748,12 +748,11 @@ return ____;
   - Extract constant
   - Extract interface
   - Encapsulate field
-- Automated refactorings: here, here and here
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Refactoring in Visual Studio
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic71.png" style="top:13.22%; left:5.49%; width:96.21%; z-index:-1" /> -->
+# Refactoring in<br/>Visual Studio
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic71.png" style="top:20%; left:5.49%; width:96.21%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 
@@ -762,8 +761,8 @@ return ____;
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Automated Build Tools
 ## CMake, Ant, Maven, MSBuild -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic72.png" style="top:15.87%; left:69.94%; width:26.67%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic73.png" style="top:15.87%; left:12.16%; width:46.46%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic72.png" style="top:15.87%; left:69.94%; width:26.67%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic73.png" style="top:15.87%; left:12.16%; width:46.46%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -807,11 +806,11 @@ return ____;
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Continuous Integration Tools
 ## CruiseControl, CruiseControl.NET, Hudson, Team Foundation Server, AppVeyor -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic74.png" style="top:11.35%; left:33.74%; width:43.41%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic74.png" style="top:12%; left:28%; width:43.41%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Continuous Integration ( -->
+<!-- # Continuous Integration -->
 - **Continuous integration (CI)**
   - Automating the build and integration process
   - Build the entire system each time any new code is checked in the source control repository
@@ -823,7 +822,7 @@ return ____;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Components of the CI System
+# Components of the<br/>Continuous Integration System
 - Build server – separate machine (or pool)
 - Source control repository
   - Subversion,  Team Foundation Server (TFS), etc.
@@ -835,7 +834,7 @@ return ____;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Continuous Integration Systems
+# CI Systems
 - CruiseControl
   - Very popular, powerful, open source CI tool
   - Extensible, plug-in based, large community
@@ -855,11 +854,11 @@ return ____;
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Documentation Generators
 ## Javadoc, Sandcastle, Doxygen, JSDoc -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic75.png" style="top:10.58%; left:37.89%; width:33.06%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic75.png" style="top:10%; left:35%; width:33.06%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Documentation Frameworks
+# Documentation<br/> Frameworks
 - The best source code documentation is the code itself
 - Special types of comments are used in many platforms
   - Used to document the code classes, methods, parameters, return types, exceptions, etc.
@@ -869,7 +868,7 @@ return ____;
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Documentation Generators
+# Documentation<br/> Generators
 - Javadoc
   - Transforms Javadoc comments used in Java into HTML documentation
 - Sandcastle
@@ -893,7 +892,7 @@ return ____;
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # What is Cloud?
-- **Cloud**≈ multiple hardware machines combine computing power and resources
+- **Cloud** ≈ multiple hardware machines combine computing power and resources
   - Share them between multiple applications
   - To save costs and use resources more efficiently
 - **Public clouds**
@@ -913,12 +912,12 @@ return ____;
     - Automated build process(compilation + unit tests)
   - Build-in load balancing
   - Rich set of add-on services
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic80.png" style="top:52.69%; left:69.13%; width:32.72%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic80.png" style="top:54%; left:60%; width:32.72%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
 
 
 
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # HQC-Part 2: Development Tools
+<!-- # HQC - Part II: Development Tools
 ## Questions? -->
 
 
