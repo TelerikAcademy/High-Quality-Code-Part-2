@@ -1,14 +1,11 @@
 <!-- section start -->
-<!-- attr: { id:'', class:'slide-title', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: {class:'slide-title', showInPresentation:true, hasScriptWrapper:true } -->
 # Debugging
 ## Building Rock-Solid Software
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic00.png" style="top:7.39%; left:51.65%; width:20.10%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic01.png" style="top:52.53%; left:51.65%; width:21.68%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic02.png" style="top:3.53%; left:84.61%; width:20.78%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic03.png" style="top:50.01%; left:79.21%; width:29.09%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic04.png" style="top:17.46%; left:9.36%; width:34.32%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic00.png" style="top:60%; left:75%; width:20.10%; z-index:-1; border-radius:10px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic01.png" style="top:20%; left:10%; width:21.68%; z-index:-1; border-radius:10px;" /> -->
 <article class="signature">
-	<p class="signature-course">High-Quality Code</p>
+	<p class="signature-course">High-Quality Code - Part 2</p>
 	<p class="signature-initiative">Telerik Software Academy</p>
 	<a href="http://academy.telerik.com " class="signature-link">http://academy.telerik.com </a>
 </article>
@@ -17,15 +14,15 @@
 
 
 <!-- section start -->
-<!-- attr: { id:'', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Table of Contents
-- Introduction to Debugging
-- Visual Studio Debugger
-- Breakpoints
-- Data Inspection
-- Threads and Stacks
-- Finding a Defect
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic05.png" style="top:20.36%; left:65.96%; width:34.38%; z-index:-1" /> -->
+- [Introduction to Debugging](#)
+- [Visual Studio Debugger](#)
+- [Breakpoints](#)
+- [Data Inspection](#)
+- [Threads and Stacks](#)
+- [Finding a Defect](#)
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic05.png" style="top:20.36%; left:65.96%; width:34.38%; z-index:-1; border-radius:10px;" /> -->
 
 
 
@@ -33,7 +30,7 @@
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Introduction to Debugging -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic06.png" style="top:29.09%; left:27.13%; width:54.66%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic06.png" style="top:45%; left:29%; width:40%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -51,27 +48,27 @@
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Debugging vs. Testing
 - **Testing**
-  - A means of **initial****detection of****errors**
+  - A means of **initial detection of errors**
 - **Debugging**
   - A means of **diagnosing** and **correcting** the root causes of errors that have already been detected
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic07.png" style="top:47.05%; left:16.84%; width:34.24%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic08.png" style="top:52.22%; left:69.19%; width:17.67%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic07.png" style="top:47.05%; left:16.84%; width:34.24%; z-index:-1; border-radius:10px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic08.png" style="top:52.22%; left:69.19%; width:17.67%; z-index:-1; border-radius:10px;" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'font-size:0.95em'  } -->
 # Importance of Debugging
 - Perfect code is an illusion
   - There is no non-trivial software without bugs
-    - programmers.stackexchange.com/q/41248/163921
+    - [programmers.stackexchange.com/q/41248/163921](http://programmers.stackexchange.com/q/41248/163921)
   - There are factors that are out of our control
 - Debugging can viewed as one big decision tree
   - Individual nodes represent theories
   - Leaf nodes represent possible root causes
 - You should be able to debug code that is written years ago
-- $60 Billion per year in economic losses due to software defects
+- $60 Billion per year in economic losses due to software defects (in USA only)
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'font-size:0.95em' } -->
 # How to Avoid Bugs
 - Reduce number of code lines
   - Write less and write smarter. Keep it simple.
@@ -90,7 +87,7 @@
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Visual Studio Debugger -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic09.png" style="top:27.33%; left:26.69%; width:55.50%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic09.png" style="top:45%; left:32%; width:35%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -111,8 +108,8 @@
 - Attaching to an already running process
   - Without a solution loaded you can still debug
   - Useful when solution isn't readily available
-  - Debug menu ->Attach to Process
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic10.png" style="top:46.38%; left:51.46%; width:44.08%; z-index:-1" /> -->
+  - Debug menu -> <br/>Attach to Process
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic10.png" style="top:53%; left:51.46%; width:45%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -134,7 +131,7 @@
   - Threading
 - Accessible from menu
   - Debug -> Windows
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic11.png" style="top:37.02%; left:58.95%; width:43.16%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic11.png" style="top:37.02%; left:58.95%; width:43.16%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -147,10 +144,10 @@
   - Breakpoints
 - Customizable to fit your needs
   - Add and/or remove buttons
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic12.png" style="top:23.80%; left:44.91%; width:57.68%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic12.png" style="top:23.80%; left:44.91%; width:53%; z-index:-1; border-radius:10px;" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'font-size:0.95em' } -->
 # Controlling Execution
 - By default, an app will run uninterrupted (and stop on exception or breakpoint)
 - Debugging is all about looking at the state of the process
@@ -165,16 +162,17 @@
 # IntelliTrace
 - IntelliTrace operates in the background, records what you are doing during debugging
 - You can easily get a past state of your application from the IntelliTrace
-- You can navigate yourcode with any part andsee what’s happened
-  - To navigate, just clickany of the events thatyou want to explore
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic13.png" style="top:39.67%; left:61.75%; width:42.81%; z-index:-1" /> -->
+- <div style="width:60%"> You can navigate your code with any part and see what’s happened
+  - To navigate, just click any of the events that you want to explore
+  </div>
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic13.png" style="top:43%; left:65%; width:38%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Options and Settings
 - Visual Studio offers quite a few knobs and tweaks in the debugging experience
 - Options and settings is available via Debug -> Options and Settings
-- _Example_s of Options and Settings
+- Examples of Options and Settings
   - Enable just my code (ignore other code)
   - Enable .NET framework source stepping
   - Source server support
@@ -187,7 +185,7 @@
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Breakpoints -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic14.png" style="top:32.62%; left:14.05%; width:79.30%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic14.png" style="top:45%; left:10%; width:79.30%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -217,20 +215,20 @@
 - Removing or disabling breakpoints
 - Labeling or grouping breakpoints
 - Export/import breakpoints
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic15.png" style="top:51.13%; left:6.16%; width:94.17%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic15.png" style="top:57%; left:6.16%; width:94.17%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Breakpoint Filters
 - Allows you to excerpt even more control of when a breakpoint hits
-- _Example_s of customization
+- Examples of customization
   - Machine name
   - Process ID
   - Process name
   - Thread ID
   - Thread name
-- Multiple can be combined using &, ||, !
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic16.png" style="top:32.62%; left:53.33%; width:42.31%; z-index:-1" /> -->
+- Multiple can be combined using `&, ||, !`
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic16.png" style="top:35%; left:63%; width:35%; z-index:-1; border-radius:10px;" /> -->
 
 
 
@@ -238,7 +236,7 @@
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Data Inspection -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic17.png" style="top:23.80%; left:21.30%; width:65.66%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic17.png" style="top:45%; left:30%; width:40%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -259,7 +257,7 @@
   - Memory and Registers
   - Data Tips
   - Immediate window
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic18.png" style="top:22.92%; left:62.69%; width:41.43%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic18.png" style="top:22.92%; left:58%; width:41.43%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -313,7 +311,7 @@
   - To call a method, use <name of variable>.<method>(arguments)
   - Similar to regular code
   - Supports Intellisense
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic19.png" style="top:52.01%; left:62.69%; width:38.63%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic19.png" style="top:52.01%; left:62.69%; width:38.63%; z-index:-1; border-radius:10px;" /> -->
 
 
 
@@ -321,7 +319,7 @@
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Threads and Stacks -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic20.png" style="top:25.56%; left:20.62%; width:66.93%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic20.png" style="top:45%; left:30%; width:45%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -344,7 +342,7 @@
   - Name
   - Location
   - Priority
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic21.png" style="top:40.55%; left:36.49%; width:67.03%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic21.png" style="top:40.55%; left:36.49%; width:67.03%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -353,8 +351,8 @@
 - Visual Studio shows the elements of a callstack
   - Local variables
   - Method frames
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic22.png" style="top:34.38%; left:67.37%; width:37.69%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic23.png" style="top:47.60%; left:12.16%; width:46.10%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic22.png" style="top:37%; left:63%; width:37.69%; z-index:-1; border-radius:10px;" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic23.png" style="top:53%; left:12.16%; width:46.10%; z-index:-1; border-radius:10px;" /> -->
 
 
 
@@ -362,7 +360,7 @@
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Finding a Defect -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic24.png" style="top:30.85%; left:29.47%; width:50.25%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic24.png" style="top:45%; left:30%; width:40%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -376,7 +374,7 @@
 - **Fix** the defect
 - **Test** the fix
 - **Look** for similar errors
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic25.png" style="top:53.77%; left:87.95%; width:16.01%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic25.png" style="top:53.77%; left:87.95%; width:16.01%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -389,7 +387,7 @@
 - Generate more data to generate more hypotheses
 - Use the results of negative tests
 - Brainstorm for possible hypotheses
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic26.png" style="top:14.99%; left:80.47%; width:20.28%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic26.png" style="top:14.99%; left:80.47%; width:20.28%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -402,7 +400,7 @@
 - Check for common defects
 - Talk to someone else about  the problem
 - Take a break from the problem
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic27.png" style="top:59.94%; left:96.60%; width:9.73%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic27.png" style="top:59.94%; left:96.60%; width:9.73%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -416,12 +414,15 @@
 - Make one change at a time
 - Add a unit test that expose the defect
 - Look for similar defects
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic28.png" style="top:28.21%; left:78.60%; width:28.36%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic28.png" style="top:28.21%; left:78.60%; width:28.36%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Psychological Considerations
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic29.png" style="top:41.43%; left:58.95%; width:38.57%; z-index:-1" /> -->
+- Your ego tells you that your code is good and doesn't have a defect even when you've seen that it has one.
+- How "Psychological Set" Contributes to Debugging Blindness
+
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic29.png" style="top:45%; left:58.95%; width:38.57%; z-index:-1; border-radius:10px;" /> -->
 
 
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
@@ -432,7 +433,7 @@
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Free Trainings @ Telerik Academy
 - C# Programming @ Telerik Academy
-    - [HQC-Part 1 course](http://academy.telerik.com/student-courses/programming/high-quality-code-part-2/about)
+    - [HQC-Part 2 course](http://academy.telerik.com/student-courses/programming/high-quality-code-part-2/about)
   - Telerik Software Academy
     - [telerikacademy.com](https://telerikacademy.com)
   - Telerik Academy @ Facebook
