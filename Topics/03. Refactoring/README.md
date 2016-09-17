@@ -6,7 +6,7 @@
 <article class="signature">
 	<p class="signature-course">High-Quality Code - Part 2</p>
 	<p class="signature-initiative">Telerik Software Academy</p>
-	<a href="http://academy.telerik.com " class="signature-link">http://academy.telerik.com </a>
+	<a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
 </article>
 
 
@@ -15,13 +15,12 @@
 <!-- section start -->
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Table of Contents
-- [What is Refactoring?](#)
-- [Refactoring principles](#)
-- [Refactoring process and tips](#)
-- [Code smells](#)
-- [Refactorings](#)
+- [Refactoring](#refactor)
+- [Refactoring principles and tips](#principles)
+- [Code smells](#smells)
+- [Refactorings](#refactoring-types)
   - Data level, statement level, method level, class level, system level refactorings, etc.
-- [Refactoring patterns](#)
+- [Refactoring patterns](#patterns)
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic02.png" style="top:14.84%; left:72.98%; width:29.24%; z-index:-1; border-radius:10px;" /> -->
 
 <!-- section start -->
@@ -29,8 +28,8 @@
 <!-- # What is Refactoring? -->
 
 
-<!-- attr: { id:'refactoring', showInPresentation:true, hasScriptWrapper:true } -->
-# <a id="refactoring"></a>What is Refactoring?
+<!-- attr: { id:'refactor', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="refactor"></a>What is Refactoring?
 <div style="width:70%">`Refactoring means "to improve the design and quality of existing source code without changing its external behavior".
 Martin Fowler`</div>
 
@@ -62,9 +61,12 @@ Martin Fowler`</div>
   - If there are no unit tests, write them
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic04.png" style="top:14.10%; left:93.12%; width:15.23%; z-index:-1; border-radius:10px;" /> -->
 
+<!-- section start -->
+<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # Refactoring Principles and Tips -->
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'font-size:0.95em' } -->
-# Good Code Main Principles
+<!-- attr: { id:'principles',showInPresentation:true, hasScriptWrapper:true, style:'font-size:0.95em' } -->
+# <a id="principles"></a>Good Code Main Principles
 - Avoid duplication (**DRY**)
 - Simplicity – Keep it simple stupid (**KISS**)
 - Make it expressive (self-documenting, comments)
@@ -125,13 +127,13 @@ Martin Fowler`</div>
 
 
 <!-- section start -->
-<!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Code Smells -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic06.png" style="top50%; left:30%; width:40%; z-index:-1; border-radius:10px;" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Code Smells
+<!-- attr: { id:'smells', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="smells"></a>Code Smells
 - Certain structures in the code that **suggest the possibility** of refactoring
 - Types of code smells
     - The bloaters
@@ -332,13 +334,13 @@ Martin Fowler`</div>
 
 
 <!-- section start -->
-<!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Refactorings -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic15.png" style="top:45%; left:28%; width:45%; z-index:-1; border-radius:10px;" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Data Level Refactorings
+<!-- attr: { id:'refactoring-types', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="refactoring-types"></a>Data Level Refactorings
 - Replace a magic number with a named constant
 - Rename a variable with more informative name
 - Replace an expression with a method
@@ -440,14 +442,14 @@ Martin Fowler`</div>
 
 
 <!-- section start -->
-<!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Refactoring Patterns
 ## Well-Known Recipes for Improving the Code Quality -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic24.png" style="top:63%; left:32%; width:35%; z-index:-1; border-radius:10px;" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Rafactoring Patterns
+<!-- attr: { id:'patterns', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="patterns"></a>Rafactoring Patterns
 - When should we perform refactoring of the code?
   - **Bad smells in the code** indicate need of refactoring
 - Unit tests guarantee that refactoring does not change the behavior

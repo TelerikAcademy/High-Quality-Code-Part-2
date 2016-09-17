@@ -16,25 +16,25 @@
 <!-- section start -->
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Table of Contents
-- [Introduction to Debugging](#)
-- [Visual Studio Debugger](#)
-- [Breakpoints](#)
-- [Data Inspection](#)
-- [Threads and Stacks](#)
-- [Finding a Defect](#)
+- [Introduction to Debugging](#debug)
+- [Visual Studio Debugger](#vs-debug)
+- [Breakpoints](#breakpoint)
+- [Data Inspection](#inspection)
+- [Threads and Stacks](#threads)
+- [Finding a Defect](#defects)
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic05.png" style="top:20.36%; left:65.96%; width:34.38%; z-index:-1; border-radius:10px;" /> -->
 
 
 
 
 <!-- section start -->
-<!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Introduction to Debugging -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic06.png" style="top:45%; left:29%; width:40%; z-index:-1; border-radius:10px;" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# What is Debugging?
+<!-- attr: { id:'debug', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="debug"></a> What is Debugging?
 - The process of locating and fixing or bypassing bugs (errors) in computer program code
 - To debug a program:
   - Start with a problem and stable source state
@@ -85,13 +85,13 @@
 
 
 <!-- section start -->
-<!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Visual Studio Debugger -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic09.png" style="top:45%; left:32%; width:35%; z-index:-1; border-radius:10px;" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Visual Studio Debugger
+<!-- attr: { id:'vs-debug', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="vs-debug"></a>Visual Studio Debugger
 - Visual Studio IDE gives us a lot of tools to debug your application
   - Adding breakpoints
   - Visualize the program flow
@@ -183,13 +183,13 @@
 
 
 <!-- section start -->
-<!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Breakpoints -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic14.png" style="top:45%; left:10%; width:79.30%; z-index:-1; border-radius:10px;" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Breakpoints
+<!-- attr: { id:'breakpoint', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="breakpoint"></a>Breakpoints
 - Ability to stop execution based on certain criteria is key when debugging
   - When a function is hit
   - When data changes
@@ -234,13 +234,13 @@
 
 
 <!-- section start -->
-<!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Data Inspection -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic17.png" style="top:45%; left:30%; width:40%; z-index:-1; border-radius:10px;" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Data Inspection
+<!-- attr: { id:'inspection', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="inspection"></a>Data Inspection
 - Debugging is all about data inspection
   - What are the local variables?
   - What is in memory?
@@ -317,13 +317,13 @@
 
 
 <!-- section start -->
-<!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Threads and Stacks -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic20.png" style="top:45%; left:30%; width:45%; z-index:-1; border-radius:10px;" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Threads
+<!-- attr: { id:'threads', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="threads"></a>Threads
 - Fundamental unit of code execution
 - Commonly, more than one thread
   - .NET, always more than one thread
@@ -358,13 +358,13 @@
 
 
 <!-- section start -->
-<!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Finding a Defect -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic24.png" style="top:45%; left:30%; width:40%; z-index:-1; border-radius:10px;" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Finding a Defect
+<!-- attr: { id:'defects', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="defects"></a>Finding a Defect
 - **Stabilize** the error
 - **Locate** the source of the error
   - **Gather** the data
