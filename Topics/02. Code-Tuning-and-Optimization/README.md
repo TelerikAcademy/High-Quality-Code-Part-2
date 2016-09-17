@@ -15,10 +15,11 @@
 <!-- section start -->
 <!-- attr: { id:'', showInPresentation:true, hasScriptWrapper:true } -->
 # Table of Contents
-- Computer Performance
-- Code Tuning
-- dotTrace
-- C# Optimizations
+- [Computer Performance](#performance)
+- [Code Tuning](#tuning)
+- [dotTrace](#dottrace)
+- [C# Optimizations](#optimization)
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic05.png" style="top:14.93%; left:66.36%; width:30.03%; z-index:-1" /> -->
 
 <!-- section start -->
@@ -26,8 +27,8 @@
 <!-- # Computer Performance -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic06.png" style="top:49.33%; left:29.03%; width:46.16%; z-index:-1" /> -->
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# What is Performance?
+<!-- attr: { id:'performance', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="performance"></a>What is Performance?
 
 ```md
 Computer performance is characterized by the amount of
@@ -102,8 +103,8 @@ blind stupidity.”
 <!-- # Code Tuning Concepts -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic07.png" style="top:43.83%; left:23.29%; width:55.67%; z-index:-1" /> -->
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Introduction to Code Tuning
+<!-- attr: { id:'tuning', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="tuning"></a>Introduction to Code Tuning
 - What is **code tuning**/ **performance tuning**?
   - Modifying the code to make it run more efficiently (faster)
   - Not the most effective / cheapest way to improve performance
@@ -148,8 +149,8 @@ a[4] = 4
 <!-- # Code Tuning Myths -->
 - "A fast program is just as important as a correct one" &rarr; **false!**
   - The software should work correctly!
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic09.png" style="top:35.59%; left:31.81%; width:45.84%; z-index:-1" /> -->
 
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic09.png" style="top:35.59%; left:31.81%; width:45.84%; z-index:-1" /> -->
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Code Tuning Myths -->
@@ -160,8 +161,8 @@ a[4] = 4
   - It is hard to identify bottlenecks before a program is completely working
   - Focus on optimization detracts from other program objectives
   - **Performance tuning breaks code quality!**
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic10.png" style="top:18.84%; left:87.02%; width:18.51%; z-index:-1" /> -->
 
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic10.png" style="top:18.84%; left:87.02%; width:18.51%; z-index:-1" /> -->
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # When to Tune the Code?
@@ -190,6 +191,7 @@ a[4] = 4
 - Measure to find bottlenecks
 - Measurements need to be precise
 - Measurements need to be repeatable
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic11.png" style="top:37.02%; left:35.56%; width:36.14%; z-index:-1" /> -->
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -197,6 +199,7 @@ a[4] = 4
 - Measure improvement after each optimization
 - If optimization does not improve performance &rarr; revert it
 - Stop testing when you know the answer
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic12.png" style="top:42.31%; left:40.23%; width:30.85%; z-index:-1" /> -->
 
 <!-- section start -->
@@ -204,8 +207,8 @@ a[4] = 4
 # JetBrains dotTrace
 ## Resolve Performance Issues
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# What is dotTrace?
+<!-- attr: { id:'dottrace', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="dottrace"></a>What is dotTrace?
 - What is dotTrace?
   - A performance analysis tool
   - Also called **profiler**
@@ -226,8 +229,8 @@ a[4] = 4
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic18.png" style="top:45.74%; left:30.67%; width:43.65%; z-index:-1" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Do We Need Optimizations?
+<!-- attr: { id:'optimization', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="optimization"></a>Do We Need Optimizations?
 - The C# language is **fast** (unlike Java)
   - A bit slower than C and C++
 - Is it worthwhile to benchmark programming constructs?
@@ -343,8 +346,8 @@ void SomeMethod() { … }
 ```
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
-# Measuring Performance in C#
-## [Demo]()
+<!--# Measuring Performance in C#-->
+<!--## [Demo]()-->
 
 <!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
