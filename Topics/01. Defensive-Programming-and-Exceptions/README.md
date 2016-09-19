@@ -60,7 +60,7 @@
 <!-- # Protecting from <br/> Invalid Input -->
 - Check the values of all **routine input parameters**
 - Decide how to handle **bad inputs**
-  - Return neural value
+  - Return neutral value
   - Substitute with valid data
   - Throw an exception
   - Display error message, log it, etc.
