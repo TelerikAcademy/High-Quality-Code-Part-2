@@ -241,7 +241,7 @@ Martin Fowler`</div>
 - **Parallel inheritance hierarchies**
   - New vehicle = new operator
   - Frequently share same prefix
-  - Hard to be completely avoided. We can merge the classes or use the Intelligent children pattern
+  - Hard to be completely avoided. We can merge the classes or use the [Intelligent children pattern](http://wiki3.cosc.canterbury.ac.nz/index.php/Intelligent_children_pattern)
 - **Inconsistent abstraction level**
   - E.g. code in a method should be one level of abstraction below the method's name
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic11.png" style="top:22%; left:70%; width:30%; z-index:-1; border-radius:10px;" /> -->
