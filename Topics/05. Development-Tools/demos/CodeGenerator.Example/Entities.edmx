@@ -1,0 +1,2202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OnlineJudgeSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AccessLogs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+          <Property Name="IpAddress" Type="nvarchar(max)" />
+          <Property Name="RequestType" Type="nvarchar(max)" />
+          <Property Name="Url" Type="nvarchar(max)" />
+          <Property Name="PostParams" Type="nvarchar(max)" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+          <Property Name="User_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="Email" Type="varchar" MaxLength="80" />
+          <Property Name="IsGhostUser" Type="bit" />
+          <Property Name="OldId" Type="int" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="30" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="30" />
+          <Property Name="City" Type="nvarchar" MaxLength="30" />
+          <Property Name="EducationalInstitution" Type="nvarchar" MaxLength="50" />
+          <Property Name="FacultyNumber" Type="nvarchar" MaxLength="30" />
+          <Property Name="DateOfBirth" Type="datetime" />
+          <Property Name="Company" Type="nvarchar" MaxLength="30" />
+          <Property Name="JobTitle" Type="nvarchar" MaxLength="30" />
+          <Property Name="ForgottenPasswordToken" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="DeletedOn" Type="datetime" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="Discriminator" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Checkers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="DllFile" Type="nvarchar(max)" />
+          <Property Name="ClassName" Type="nvarchar(max)" />
+          <Property Name="Parameter" Type="nvarchar(max)" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ContestCategories">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="OrderBy" Type="int" Nullable="false" />
+          <Property Name="ParentId" Type="int" />
+          <Property Name="IsVisible" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ContestQuestionAnswers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QuestionId" Type="int" Nullable="false" />
+          <Property Name="Text" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ContestQuestions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ContestId" Type="int" Nullable="false" />
+          <Property Name="Text" Type="nvarchar" MaxLength="100" />
+          <Property Name="AskOfficialParticipants" Type="bit" Nullable="false" />
+          <Property Name="AskPracticeParticipants" Type="bit" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="RegularExpressionValidation" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Contests">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OldId" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsVisible" Type="bit" Nullable="false" />
+          <Property Name="CategoryId" Type="int" />
+          <Property Name="StartTime" Type="datetime" />
+          <Property Name="EndTime" Type="datetime" />
+          <Property Name="ContestPassword" Type="nvarchar" MaxLength="20" />
+          <Property Name="PracticePassword" Type="nvarchar" MaxLength="20" />
+          <Property Name="PracticeStartTime" Type="datetime" />
+          <Property Name="PracticeEndTime" Type="datetime" />
+          <Property Name="LimitBetweenSubmissions" Type="int" Nullable="false" />
+          <Property Name="OrderBy" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Events">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="StartTime" Type="datetime" Nullable="false" />
+          <Property Name="EndTime" Type="datetime" />
+          <Property Name="Url" Type="nvarchar(max)" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="FeedbackReports">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="IsFixed" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="User_Id" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="Author" Type="nvarchar(max)" />
+          <Property Name="Source" Type="nvarchar(max)" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="IsVisible" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ParticipantAnswers">
+          <Key>
+            <PropertyRef Name="ParticipantId" />
+            <PropertyRef Name="ContestQuestionId" />
+          </Key>
+          <Property Name="ParticipantId" Type="int" Nullable="false" />
+          <Property Name="ContestQuestionId" Type="int" Nullable="false" />
+          <Property Name="Answer" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Participants">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OldId" Type="int" Nullable="false" />
+          <Property Name="ContestId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+          <Property Name="IsOfficial" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ProblemResources">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProblemId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="File" Type="varbinary(max)" />
+          <Property Name="FileExtension" Type="nvarchar" MaxLength="4" />
+          <Property Name="Link" Type="nvarchar(max)" />
+          <Property Name="OrderBy" Type="int" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Problems">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OldId" Type="int" />
+          <Property Name="ContestId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaximumPoints" Type="smallint" Nullable="false" />
+          <Property Name="TimeLimit" Type="int" Nullable="false" />
+          <Property Name="MemoryLimit" Type="int" Nullable="false" />
+          <Property Name="SourceCodeSizeLimit" Type="int" />
+          <Property Name="CheckerId" Type="int" />
+          <Property Name="OrderBy" Type="int" Nullable="false" />
+          <Property Name="ShowResults" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="ShowDetailedFeedback" Type="bit" Nullable="false" />
+          <Property Name="SolutionSkeleton" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Value" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="SourceCodes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AuthorId" Type="nvarchar" MaxLength="128" />
+          <Property Name="ProblemId" Type="int" />
+          <Property Name="Content" Type="varbinary(max)" />
+          <Property Name="IsPublic" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Submissions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParticipantId" Type="int" />
+          <Property Name="ProblemId" Type="int" />
+          <Property Name="SubmissionTypeId" Type="int" />
+          <Property Name="Content" Type="varbinary(max)" />
+          <Property Name="IsCompiledSuccessfully" Type="bit" Nullable="false" />
+          <Property Name="CompilerComment" Type="nvarchar(max)" />
+          <Property Name="Processed" Type="bit" Nullable="false" />
+          <Property Name="Processing" Type="bit" Nullable="false" />
+          <Property Name="ProcessingComment" Type="nvarchar(max)" />
+          <Property Name="Points" Type="int" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="FileExtension" Type="nvarchar(max)" />
+          <Property Name="IpAddress" Type="varchar" MaxLength="45" />
+          <Property Name="SolutionSkeleton" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="SubmissionTypeContests">
+          <Key>
+            <PropertyRef Name="SubmissionType_Id" />
+            <PropertyRef Name="Contest_Id" />
+          </Key>
+          <Property Name="SubmissionType_Id" Type="int" Nullable="false" />
+          <Property Name="Contest_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SubmissionTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="IsSelectedByDefault" Type="bit" Nullable="false" />
+          <Property Name="ExecutionStrategyType" Type="int" Nullable="false" />
+          <Property Name="CompilerType" Type="int" Nullable="false" />
+          <Property Name="AdditionalCompilerArguments" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="AllowBinaryFilesUpload" Type="bit" Nullable="false" />
+          <Property Name="AllowedFileExtensions" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TagProblems">
+          <Key>
+            <PropertyRef Name="Tag_Id" />
+            <PropertyRef Name="Problem_Id" />
+          </Key>
+          <Property Name="Tag_Id" Type="int" Nullable="false" />
+          <Property Name="Problem_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tags">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ForegroundColor" Type="nvarchar(max)" />
+          <Property Name="BackgroundColor" Type="nvarchar(max)" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedOn" Type="datetime" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TestRuns">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubmissionId" Type="int" Nullable="false" />
+          <Property Name="TestId" Type="int" Nullable="false" />
+          <Property Name="TimeUsed" Type="int" Nullable="false" />
+          <Property Name="MemoryUsed" Type="bigint" Nullable="false" />
+          <Property Name="ResultType" Type="int" Nullable="false" />
+          <Property Name="ExecutionComment" Type="nvarchar(max)" />
+          <Property Name="CheckerComment" Type="nvarchar(max)" />
+          <Property Name="ExpectedOutputFragment" Type="nvarchar(max)" />
+          <Property Name="UserOutputFragment" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Tests">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProblemId" Type="int" Nullable="false" />
+          <Property Name="InputData" Type="varbinary(max)" />
+          <Property Name="OutputData" Type="varbinary(max)" />
+          <Property Name="IsTrialTest" Type="bit" Nullable="false" />
+          <Property Name="OrderBy" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_dbo_AccessLogs_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+          <End Role="AccessLogs" Type="Self.AccessLogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AccessLogs">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="User_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ContestCategories_dbo_ContestCategories_ParentId">
+          <End Role="ContestCategories" Type="Self.ContestCategories" Multiplicity="0..1" />
+          <End Role="ContestCategories1" Type="Self.ContestCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ContestCategories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ContestCategories1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ContestQuestionAnswers_dbo_ContestQuestions_QuestionId">
+          <End Role="ContestQuestions" Type="Self.ContestQuestions" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ContestQuestionAnswers" Type="Self.ContestQuestionAnswers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ContestQuestions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ContestQuestionAnswers">
+              <PropertyRef Name="QuestionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ContestQuestions_dbo_Contests_ContestId">
+          <End Role="Contests" Type="Self.Contests" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ContestQuestions" Type="Self.ContestQuestions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ContestQuestions">
+              <PropertyRef Name="ContestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Contests_dbo_ContestCategories_CategoryId">
+          <End Role="ContestCategories" Type="Self.ContestCategories" Multiplicity="0..1" />
+          <End Role="Contests" Type="Self.Contests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ContestCategories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Contests">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_FeedbackReports_dbo_AspNetUsers_User_Id">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+          <End Role="FeedbackReports" Type="Self.FeedbackReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FeedbackReports">
+              <PropertyRef Name="User_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ParticipantAnswers_dbo_ContestQuestions_ContestQuestionId">
+          <End Role="ContestQuestions" Type="Self.ContestQuestions" Multiplicity="1" />
+          <End Role="ParticipantAnswers" Type="Self.ParticipantAnswers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ContestQuestions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ParticipantAnswers">
+              <PropertyRef Name="ContestQuestionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ParticipantAnswers_dbo_Participants_ParticipantId">
+          <End Role="Participants" Type="Self.Participants" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ParticipantAnswers" Type="Self.ParticipantAnswers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Participants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ParticipantAnswers">
+              <PropertyRef Name="ParticipantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Participants_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+          <End Role="Participants" Type="Self.Participants" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Participants">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Participants_dbo_Contests_ContestId">
+          <End Role="Contests" Type="Self.Contests" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Participants" Type="Self.Participants" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Participants">
+              <PropertyRef Name="ContestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ProblemResources_dbo_Problems_ProblemId">
+          <End Role="Problems" Type="Self.Problems" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ProblemResources" Type="Self.ProblemResources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Problems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProblemResources">
+              <PropertyRef Name="ProblemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Problems_dbo_Checkers_CheckerId">
+          <End Role="Checkers" Type="Self.Checkers" Multiplicity="0..1" />
+          <End Role="Problems" Type="Self.Problems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Checkers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Problems">
+              <PropertyRef Name="CheckerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Problems_dbo_Contests_ContestId">
+          <End Role="Contests" Type="Self.Contests" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Problems" Type="Self.Problems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Problems">
+              <PropertyRef Name="ContestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_SourceCodes_dbo_AspNetUsers_AuthorId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+          <End Role="SourceCodes" Type="Self.SourceCodes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SourceCodes">
+              <PropertyRef Name="AuthorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_SourceCodes_dbo_Problems_ProblemId">
+          <End Role="Problems" Type="Self.Problems" Multiplicity="0..1" />
+          <End Role="SourceCodes" Type="Self.SourceCodes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Problems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SourceCodes">
+              <PropertyRef Name="ProblemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Submissions_dbo_Participants_ParticipantId">
+          <End Role="Participants" Type="Self.Participants" Multiplicity="0..1" />
+          <End Role="Submissions" Type="Self.Submissions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Participants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Submissions">
+              <PropertyRef Name="ParticipantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Submissions_dbo_Problems_ProblemId">
+          <End Role="Problems" Type="Self.Problems" Multiplicity="0..1" />
+          <End Role="Submissions" Type="Self.Submissions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Problems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Submissions">
+              <PropertyRef Name="ProblemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Submissions_dbo_SubmissionTypes_SubmissionTypeId">
+          <End Role="SubmissionTypes" Type="Self.SubmissionTypes" Multiplicity="0..1" />
+          <End Role="Submissions" Type="Self.Submissions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubmissionTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Submissions">
+              <PropertyRef Name="SubmissionTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_SubmissionTypeContests_dbo_Contests_Contest_Id">
+          <End Role="Contests" Type="Self.Contests" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SubmissionTypeContests" Type="Self.SubmissionTypeContests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubmissionTypeContests">
+              <PropertyRef Name="Contest_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_SubmissionTypeContests_dbo_SubmissionTypes_SubmissionType_Id">
+          <End Role="SubmissionTypes" Type="Self.SubmissionTypes" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SubmissionTypeContests" Type="Self.SubmissionTypeContests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubmissionTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubmissionTypeContests">
+              <PropertyRef Name="SubmissionType_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_TagProblems_dbo_Problems_Problem_Id">
+          <End Role="Problems" Type="Self.Problems" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TagProblems" Type="Self.TagProblems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Problems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TagProblems">
+              <PropertyRef Name="Problem_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_TagProblems_dbo_Tags_Tag_Id">
+          <End Role="Tags" Type="Self.Tags" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TagProblems" Type="Self.TagProblems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tags">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TagProblems">
+              <PropertyRef Name="Tag_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_TestRuns_dbo_Submissions_SubmissionId">
+          <End Role="Submissions" Type="Self.Submissions" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TestRuns" Type="Self.TestRuns" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Submissions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TestRuns">
+              <PropertyRef Name="SubmissionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_TestRuns_dbo_Tests_TestId">
+          <End Role="Tests" Type="Self.Tests" Multiplicity="1" />
+          <End Role="TestRuns" Type="Self.TestRuns" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TestRuns">
+              <PropertyRef Name="TestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Tests_dbo_Problems_ProblemId">
+          <End Role="Problems" Type="Self.Problems" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tests" Type="Self.Tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Problems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="ProblemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OnlineJudgeSystemModelStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccessLogs" EntityType="Self.AccessLogs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Checkers" EntityType="Self.Checkers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ContestCategories" EntityType="Self.ContestCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ContestQuestionAnswers" EntityType="Self.ContestQuestionAnswers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ContestQuestions" EntityType="Self.ContestQuestions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contests" EntityType="Self.Contests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Events" EntityType="Self.Events" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FeedbackReports" EntityType="Self.FeedbackReports" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ParticipantAnswers" EntityType="Self.ParticipantAnswers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Participants" EntityType="Self.Participants" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProblemResources" EntityType="Self.ProblemResources" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Problems" EntityType="Self.Problems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Settings" EntityType="Self.Settings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SourceCodes" EntityType="Self.SourceCodes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Submissions" EntityType="Self.Submissions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubmissionTypeContests" EntityType="Self.SubmissionTypeContests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubmissionTypes" EntityType="Self.SubmissionTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TagProblems" EntityType="Self.TagProblems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tags" EntityType="Self.Tags" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TestRuns" EntityType="Self.TestRuns" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tests" EntityType="Self.Tests" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_AccessLogs_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AccessLogs_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AccessLogs" EntitySet="AccessLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ContestCategories_dbo_ContestCategories_ParentId" Association="Self.FK_dbo_ContestCategories_dbo_ContestCategories_ParentId">
+            <End Role="ContestCategories" EntitySet="ContestCategories" />
+            <End Role="ContestCategories1" EntitySet="ContestCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ContestQuestionAnswers_dbo_ContestQuestions_QuestionId" Association="Self.FK_dbo_ContestQuestionAnswers_dbo_ContestQuestions_QuestionId">
+            <End Role="ContestQuestions" EntitySet="ContestQuestions" />
+            <End Role="ContestQuestionAnswers" EntitySet="ContestQuestionAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ContestQuestions_dbo_Contests_ContestId" Association="Self.FK_dbo_ContestQuestions_dbo_Contests_ContestId">
+            <End Role="Contests" EntitySet="Contests" />
+            <End Role="ContestQuestions" EntitySet="ContestQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Contests_dbo_ContestCategories_CategoryId" Association="Self.FK_dbo_Contests_dbo_ContestCategories_CategoryId">
+            <End Role="ContestCategories" EntitySet="ContestCategories" />
+            <End Role="Contests" EntitySet="Contests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_FeedbackReports_dbo_AspNetUsers_User_Id" Association="Self.FK_dbo_FeedbackReports_dbo_AspNetUsers_User_Id">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="FeedbackReports" EntitySet="FeedbackReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ParticipantAnswers_dbo_ContestQuestions_ContestQuestionId" Association="Self.FK_dbo_ParticipantAnswers_dbo_ContestQuestions_ContestQuestionId">
+            <End Role="ContestQuestions" EntitySet="ContestQuestions" />
+            <End Role="ParticipantAnswers" EntitySet="ParticipantAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ParticipantAnswers_dbo_Participants_ParticipantId" Association="Self.FK_dbo_ParticipantAnswers_dbo_Participants_ParticipantId">
+            <End Role="Participants" EntitySet="Participants" />
+            <End Role="ParticipantAnswers" EntitySet="ParticipantAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Participants_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_Participants_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="Participants" EntitySet="Participants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Participants_dbo_Contests_ContestId" Association="Self.FK_dbo_Participants_dbo_Contests_ContestId">
+            <End Role="Contests" EntitySet="Contests" />
+            <End Role="Participants" EntitySet="Participants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ProblemResources_dbo_Problems_ProblemId" Association="Self.FK_dbo_ProblemResources_dbo_Problems_ProblemId">
+            <End Role="Problems" EntitySet="Problems" />
+            <End Role="ProblemResources" EntitySet="ProblemResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Problems_dbo_Checkers_CheckerId" Association="Self.FK_dbo_Problems_dbo_Checkers_CheckerId">
+            <End Role="Checkers" EntitySet="Checkers" />
+            <End Role="Problems" EntitySet="Problems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Problems_dbo_Contests_ContestId" Association="Self.FK_dbo_Problems_dbo_Contests_ContestId">
+            <End Role="Contests" EntitySet="Contests" />
+            <End Role="Problems" EntitySet="Problems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_SourceCodes_dbo_AspNetUsers_AuthorId" Association="Self.FK_dbo_SourceCodes_dbo_AspNetUsers_AuthorId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="SourceCodes" EntitySet="SourceCodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_SourceCodes_dbo_Problems_ProblemId" Association="Self.FK_dbo_SourceCodes_dbo_Problems_ProblemId">
+            <End Role="Problems" EntitySet="Problems" />
+            <End Role="SourceCodes" EntitySet="SourceCodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Submissions_dbo_Participants_ParticipantId" Association="Self.FK_dbo_Submissions_dbo_Participants_ParticipantId">
+            <End Role="Participants" EntitySet="Participants" />
+            <End Role="Submissions" EntitySet="Submissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Submissions_dbo_Problems_ProblemId" Association="Self.FK_dbo_Submissions_dbo_Problems_ProblemId">
+            <End Role="Problems" EntitySet="Problems" />
+            <End Role="Submissions" EntitySet="Submissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Submissions_dbo_SubmissionTypes_SubmissionTypeId" Association="Self.FK_dbo_Submissions_dbo_SubmissionTypes_SubmissionTypeId">
+            <End Role="SubmissionTypes" EntitySet="SubmissionTypes" />
+            <End Role="Submissions" EntitySet="Submissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_SubmissionTypeContests_dbo_Contests_Contest_Id" Association="Self.FK_dbo_SubmissionTypeContests_dbo_Contests_Contest_Id">
+            <End Role="Contests" EntitySet="Contests" />
+            <End Role="SubmissionTypeContests" EntitySet="SubmissionTypeContests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_SubmissionTypeContests_dbo_SubmissionTypes_SubmissionType_Id" Association="Self.FK_dbo_SubmissionTypeContests_dbo_SubmissionTypes_SubmissionType_Id">
+            <End Role="SubmissionTypes" EntitySet="SubmissionTypes" />
+            <End Role="SubmissionTypeContests" EntitySet="SubmissionTypeContests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_TagProblems_dbo_Problems_Problem_Id" Association="Self.FK_dbo_TagProblems_dbo_Problems_Problem_Id">
+            <End Role="Problems" EntitySet="Problems" />
+            <End Role="TagProblems" EntitySet="TagProblems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_TagProblems_dbo_Tags_Tag_Id" Association="Self.FK_dbo_TagProblems_dbo_Tags_Tag_Id">
+            <End Role="Tags" EntitySet="Tags" />
+            <End Role="TagProblems" EntitySet="TagProblems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_TestRuns_dbo_Submissions_SubmissionId" Association="Self.FK_dbo_TestRuns_dbo_Submissions_SubmissionId">
+            <End Role="Submissions" EntitySet="Submissions" />
+            <End Role="TestRuns" EntitySet="TestRuns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_TestRuns_dbo_Tests_TestId" Association="Self.FK_dbo_TestRuns_dbo_Tests_TestId">
+            <End Role="Tests" EntitySet="Tests" />
+            <End Role="TestRuns" EntitySet="TestRuns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Tests_dbo_Problems_ProblemId" Association="Self.FK_dbo_Tests_dbo_Problems_ProblemId">
+            <End Role="Problems" EntitySet="Problems" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OnlineJudgeSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AccessLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="IpAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RequestType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PostParams" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AccessLogs_dbo_AspNetUsers_UserId" FromRole="AccessLogs" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="User_Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogin">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+          </Key>
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="IsGhostUser" Type="Boolean" />
+          <Property Name="OldId" Type="Int32" />
+          <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="EducationalInstitution" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FacultyNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+          <Property Name="Company" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="JobTitle" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ForgottenPasswordToken" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="Discriminator" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AccessLogs" Relationship="Self.FK_dbo_AccessLogs_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AccessLogs" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+          <NavigationProperty Name="FeedbackReports" Relationship="Self.FK_dbo_FeedbackReports_dbo_AspNetUsers_User_Id" FromRole="AspNetUsers" ToRole="FeedbackReports" />
+          <NavigationProperty Name="Participants" Relationship="Self.FK_dbo_Participants_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="Participants" />
+          <NavigationProperty Name="SourceCodes" Relationship="Self.FK_dbo_SourceCodes_dbo_AspNetUsers_AuthorId" FromRole="AspNetUsers" ToRole="SourceCodes" />
+          <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+        </EntityType>
+        <EntityType Name="Checker">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DllFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClassName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Parameter" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Problems" Relationship="Self.FK_dbo_Problems_dbo_Checkers_CheckerId" FromRole="Checkers" ToRole="Problems" />
+        </EntityType>
+        <EntityType Name="ContestCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OrderBy" Type="Int32" Nullable="false" />
+          <Property Name="ParentId" Type="Int32" />
+          <Property Name="IsVisible" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="ContestCategories1" Relationship="Self.FK_dbo_ContestCategories_dbo_ContestCategories_ParentId" FromRole="ContestCategories" ToRole="ContestCategories1" />
+          <NavigationProperty Name="ContestCategory1" Relationship="Self.FK_dbo_ContestCategories_dbo_ContestCategories_ParentId" FromRole="ContestCategories1" ToRole="ContestCategories" />
+          <NavigationProperty Name="Contests" Relationship="Self.FK_dbo_Contests_dbo_ContestCategories_CategoryId" FromRole="ContestCategories" ToRole="Contests" />
+        </EntityType>
+        <EntityType Name="ContestQuestionAnswer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QuestionId" Type="Int32" Nullable="false" />
+          <Property Name="Text" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="ContestQuestion" Relationship="Self.FK_dbo_ContestQuestionAnswers_dbo_ContestQuestions_QuestionId" FromRole="ContestQuestionAnswers" ToRole="ContestQuestions" />
+        </EntityType>
+        <EntityType Name="ContestQuestion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ContestId" Type="Int32" Nullable="false" />
+          <Property Name="Text" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AskOfficialParticipants" Type="Boolean" Nullable="false" />
+          <Property Name="AskPracticeParticipants" Type="Boolean" Nullable="false" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="RegularExpressionValidation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ContestQuestionAnswers" Relationship="Self.FK_dbo_ContestQuestionAnswers_dbo_ContestQuestions_QuestionId" FromRole="ContestQuestions" ToRole="ContestQuestionAnswers" />
+          <NavigationProperty Name="Contest" Relationship="Self.FK_dbo_ContestQuestions_dbo_Contests_ContestId" FromRole="ContestQuestions" ToRole="Contests" />
+          <NavigationProperty Name="ParticipantAnswers" Relationship="Self.FK_dbo_ParticipantAnswers_dbo_ContestQuestions_ContestQuestionId" FromRole="ContestQuestions" ToRole="ParticipantAnswers" />
+        </EntityType>
+        <EntityType Name="Contest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OldId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsVisible" Type="Boolean" Nullable="false" />
+          <Property Name="CategoryId" Type="Int32" />
+          <Property Name="StartTime" Type="DateTime" Precision="3" />
+          <Property Name="EndTime" Type="DateTime" Precision="3" />
+          <Property Name="ContestPassword" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PracticePassword" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PracticeStartTime" Type="DateTime" Precision="3" />
+          <Property Name="PracticeEndTime" Type="DateTime" Precision="3" />
+          <Property Name="LimitBetweenSubmissions" Type="Int32" Nullable="false" />
+          <Property Name="OrderBy" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="ContestCategory" Relationship="Self.FK_dbo_Contests_dbo_ContestCategories_CategoryId" FromRole="Contests" ToRole="ContestCategories" />
+          <NavigationProperty Name="ContestQuestions" Relationship="Self.FK_dbo_ContestQuestions_dbo_Contests_ContestId" FromRole="Contests" ToRole="ContestQuestions" />
+          <NavigationProperty Name="Participants" Relationship="Self.FK_dbo_Participants_dbo_Contests_ContestId" FromRole="Contests" ToRole="Participants" />
+          <NavigationProperty Name="Problems" Relationship="Self.FK_dbo_Problems_dbo_Contests_ContestId" FromRole="Contests" ToRole="Problems" />
+          <NavigationProperty Name="SubmissionTypes" Relationship="Self.SubmissionTypeContests" FromRole="Contests" ToRole="SubmissionTypes" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndTime" Type="DateTime" Precision="3" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="FeedbackReport">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsFixed" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="User_Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_FeedbackReports_dbo_AspNetUsers_User_Id" FromRole="FeedbackReports" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Source" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsVisible" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ParticipantAnswer">
+          <Key>
+            <PropertyRef Name="ParticipantId" />
+            <PropertyRef Name="ContestQuestionId" />
+          </Key>
+          <Property Name="ParticipantId" Type="Int32" Nullable="false" />
+          <Property Name="ContestQuestionId" Type="Int32" Nullable="false" />
+          <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ContestQuestion" Relationship="Self.FK_dbo_ParticipantAnswers_dbo_ContestQuestions_ContestQuestionId" FromRole="ParticipantAnswers" ToRole="ContestQuestions" />
+          <NavigationProperty Name="Participant" Relationship="Self.FK_dbo_ParticipantAnswers_dbo_Participants_ParticipantId" FromRole="ParticipantAnswers" ToRole="Participants" />
+        </EntityType>
+        <EntityType Name="Participant">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OldId" Type="Int32" Nullable="false" />
+          <Property Name="ContestId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="IsOfficial" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_Participants_dbo_AspNetUsers_UserId" FromRole="Participants" ToRole="AspNetUsers" />
+          <NavigationProperty Name="Contest" Relationship="Self.FK_dbo_Participants_dbo_Contests_ContestId" FromRole="Participants" ToRole="Contests" />
+          <NavigationProperty Name="ParticipantAnswers" Relationship="Self.FK_dbo_ParticipantAnswers_dbo_Participants_ParticipantId" FromRole="Participants" ToRole="ParticipantAnswers" />
+          <NavigationProperty Name="Submissions" Relationship="Self.FK_dbo_Submissions_dbo_Participants_ParticipantId" FromRole="Participants" ToRole="Submissions" />
+        </EntityType>
+        <EntityType Name="ProblemResource">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProblemId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="File" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="FileExtension" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OrderBy" Type="Int32" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Problem" Relationship="Self.FK_dbo_ProblemResources_dbo_Problems_ProblemId" FromRole="ProblemResources" ToRole="Problems" />
+        </EntityType>
+        <EntityType Name="Problem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OldId" Type="Int32" />
+          <Property Name="ContestId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaximumPoints" Type="Int16" Nullable="false" />
+          <Property Name="TimeLimit" Type="Int32" Nullable="false" />
+          <Property Name="MemoryLimit" Type="Int32" Nullable="false" />
+          <Property Name="SourceCodeSizeLimit" Type="Int32" />
+          <Property Name="CheckerId" Type="Int32" />
+          <Property Name="OrderBy" Type="Int32" Nullable="false" />
+          <Property Name="ShowResults" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="ShowDetailedFeedback" Type="Boolean" Nullable="false" />
+          <Property Name="SolutionSkeleton" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Checker" Relationship="Self.FK_dbo_Problems_dbo_Checkers_CheckerId" FromRole="Problems" ToRole="Checkers" />
+          <NavigationProperty Name="Contest" Relationship="Self.FK_dbo_Problems_dbo_Contests_ContestId" FromRole="Problems" ToRole="Contests" />
+          <NavigationProperty Name="ProblemResources" Relationship="Self.FK_dbo_ProblemResources_dbo_Problems_ProblemId" FromRole="Problems" ToRole="ProblemResources" />
+          <NavigationProperty Name="SourceCodes" Relationship="Self.FK_dbo_SourceCodes_dbo_Problems_ProblemId" FromRole="Problems" ToRole="SourceCodes" />
+          <NavigationProperty Name="Submissions" Relationship="Self.FK_dbo_Submissions_dbo_Problems_ProblemId" FromRole="Problems" ToRole="Submissions" />
+          <NavigationProperty Name="Tests" Relationship="Self.FK_dbo_Tests_dbo_Problems_ProblemId" FromRole="Problems" ToRole="Tests" />
+          <NavigationProperty Name="Tags" Relationship="Self.TagProblems" FromRole="Problems" ToRole="Tags" />
+        </EntityType>
+        <EntityType Name="Setting">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SourceCode">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AuthorId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ProblemId" Type="Int32" />
+          <Property Name="Content" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="IsPublic" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_SourceCodes_dbo_AspNetUsers_AuthorId" FromRole="SourceCodes" ToRole="AspNetUsers" />
+          <NavigationProperty Name="Problem" Relationship="Self.FK_dbo_SourceCodes_dbo_Problems_ProblemId" FromRole="SourceCodes" ToRole="Problems" />
+        </EntityType>
+        <EntityType Name="Submission">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParticipantId" Type="Int32" />
+          <Property Name="ProblemId" Type="Int32" />
+          <Property Name="SubmissionTypeId" Type="Int32" />
+          <Property Name="Content" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="IsCompiledSuccessfully" Type="Boolean" Nullable="false" />
+          <Property Name="CompilerComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Processed" Type="Boolean" Nullable="false" />
+          <Property Name="Processing" Type="Boolean" Nullable="false" />
+          <Property Name="ProcessingComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Points" Type="Int32" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="FileExtension" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IpAddress" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="SolutionSkeleton" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Participant" Relationship="Self.FK_dbo_Submissions_dbo_Participants_ParticipantId" FromRole="Submissions" ToRole="Participants" />
+          <NavigationProperty Name="Problem" Relationship="Self.FK_dbo_Submissions_dbo_Problems_ProblemId" FromRole="Submissions" ToRole="Problems" />
+          <NavigationProperty Name="SubmissionType" Relationship="Self.FK_dbo_Submissions_dbo_SubmissionTypes_SubmissionTypeId" FromRole="Submissions" ToRole="SubmissionTypes" />
+          <NavigationProperty Name="TestRuns" Relationship="Self.FK_dbo_TestRuns_dbo_Submissions_SubmissionId" FromRole="Submissions" ToRole="TestRuns" />
+        </EntityType>
+        <EntityType Name="SubmissionType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsSelectedByDefault" Type="Boolean" Nullable="false" />
+          <Property Name="ExecutionStrategyType" Type="Int32" Nullable="false" />
+          <Property Name="CompilerType" Type="Int32" Nullable="false" />
+          <Property Name="AdditionalCompilerArguments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AllowBinaryFilesUpload" Type="Boolean" Nullable="false" />
+          <Property Name="AllowedFileExtensions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Submissions" Relationship="Self.FK_dbo_Submissions_dbo_SubmissionTypes_SubmissionTypeId" FromRole="SubmissionTypes" ToRole="Submissions" />
+          <NavigationProperty Name="Contests" Relationship="Self.SubmissionTypeContests" FromRole="SubmissionTypes" ToRole="Contests" />
+        </EntityType>
+        <EntityType Name="Tag">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ForegroundColor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BackgroundColor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Problems" Relationship="Self.TagProblems" FromRole="Tags" ToRole="Problems" />
+        </EntityType>
+        <EntityType Name="TestRun">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubmissionId" Type="Int32" Nullable="false" />
+          <Property Name="TestId" Type="Int32" Nullable="false" />
+          <Property Name="TimeUsed" Type="Int32" Nullable="false" />
+          <Property Name="MemoryUsed" Type="Int64" Nullable="false" />
+          <Property Name="ResultType" Type="Int32" Nullable="false" />
+          <Property Name="ExecutionComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CheckerComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExpectedOutputFragment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserOutputFragment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Submission" Relationship="Self.FK_dbo_TestRuns_dbo_Submissions_SubmissionId" FromRole="TestRuns" ToRole="Submissions" />
+          <NavigationProperty Name="Test" Relationship="Self.FK_dbo_TestRuns_dbo_Tests_TestId" FromRole="TestRuns" ToRole="Tests" />
+        </EntityType>
+        <EntityType Name="Test">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProblemId" Type="Int32" Nullable="false" />
+          <Property Name="InputData" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="OutputData" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="IsTrialTest" Type="Boolean" Nullable="false" />
+          <Property Name="OrderBy" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Problem" Relationship="Self.FK_dbo_Tests_dbo_Problems_ProblemId" FromRole="Tests" ToRole="Problems" />
+          <NavigationProperty Name="TestRuns" Relationship="Self.FK_dbo_TestRuns_dbo_Tests_TestId" FromRole="Tests" ToRole="TestRuns" />
+        </EntityType>
+        <Association Name="FK_dbo_AccessLogs_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+          <End Role="AccessLogs" Type="Self.AccessLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AccessLogs">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="User_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_FeedbackReports_dbo_AspNetUsers_User_Id">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+          <End Role="FeedbackReports" Type="Self.FeedbackReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FeedbackReports">
+              <PropertyRef Name="User_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Participants_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+          <End Role="Participants" Type="Self.Participant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Participants">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_SourceCodes_dbo_AspNetUsers_AuthorId">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+          <End Role="SourceCodes" Type="Self.SourceCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SourceCodes">
+              <PropertyRef Name="AuthorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Problems_dbo_Checkers_CheckerId">
+          <End Role="Checkers" Type="Self.Checker" Multiplicity="0..1" />
+          <End Role="Problems" Type="Self.Problem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Checkers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Problems">
+              <PropertyRef Name="CheckerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ContestCategories_dbo_ContestCategories_ParentId">
+          <End Role="ContestCategories" Type="Self.ContestCategory" Multiplicity="0..1" />
+          <End Role="ContestCategories1" Type="Self.ContestCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ContestCategories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ContestCategories1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Contests_dbo_ContestCategories_CategoryId">
+          <End Role="ContestCategories" Type="Self.ContestCategory" Multiplicity="0..1" />
+          <End Role="Contests" Type="Self.Contest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ContestCategories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Contests">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ContestQuestionAnswers_dbo_ContestQuestions_QuestionId">
+          <End Role="ContestQuestions" Type="Self.ContestQuestion" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ContestQuestionAnswers" Type="Self.ContestQuestionAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ContestQuestions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ContestQuestionAnswers">
+              <PropertyRef Name="QuestionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ContestQuestions_dbo_Contests_ContestId">
+          <End Role="Contests" Type="Self.Contest" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ContestQuestions" Type="Self.ContestQuestion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ContestQuestions">
+              <PropertyRef Name="ContestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ParticipantAnswers_dbo_ContestQuestions_ContestQuestionId">
+          <End Role="ContestQuestions" Type="Self.ContestQuestion" Multiplicity="1" />
+          <End Role="ParticipantAnswers" Type="Self.ParticipantAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ContestQuestions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ParticipantAnswers">
+              <PropertyRef Name="ContestQuestionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Participants_dbo_Contests_ContestId">
+          <End Role="Contests" Type="Self.Contest" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Participants" Type="Self.Participant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Participants">
+              <PropertyRef Name="ContestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Problems_dbo_Contests_ContestId">
+          <End Role="Contests" Type="Self.Contest" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Problems" Type="Self.Problem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Problems">
+              <PropertyRef Name="ContestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ParticipantAnswers_dbo_Participants_ParticipantId">
+          <End Role="Participants" Type="Self.Participant" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ParticipantAnswers" Type="Self.ParticipantAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Participants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ParticipantAnswers">
+              <PropertyRef Name="ParticipantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Submissions_dbo_Participants_ParticipantId">
+          <End Role="Participants" Type="Self.Participant" Multiplicity="0..1" />
+          <End Role="Submissions" Type="Self.Submission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Participants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Submissions">
+              <PropertyRef Name="ParticipantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ProblemResources_dbo_Problems_ProblemId">
+          <End Role="Problems" Type="Self.Problem" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ProblemResources" Type="Self.ProblemResource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Problems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProblemResources">
+              <PropertyRef Name="ProblemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_SourceCodes_dbo_Problems_ProblemId">
+          <End Role="Problems" Type="Self.Problem" Multiplicity="0..1" />
+          <End Role="SourceCodes" Type="Self.SourceCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Problems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SourceCodes">
+              <PropertyRef Name="ProblemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Submissions_dbo_Problems_ProblemId">
+          <End Role="Problems" Type="Self.Problem" Multiplicity="0..1" />
+          <End Role="Submissions" Type="Self.Submission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Problems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Submissions">
+              <PropertyRef Name="ProblemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Tests_dbo_Problems_ProblemId">
+          <End Role="Problems" Type="Self.Problem" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tests" Type="Self.Test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Problems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="ProblemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Submissions_dbo_SubmissionTypes_SubmissionTypeId">
+          <End Role="SubmissionTypes" Type="Self.SubmissionType" Multiplicity="0..1" />
+          <End Role="Submissions" Type="Self.Submission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubmissionTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Submissions">
+              <PropertyRef Name="SubmissionTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_TestRuns_dbo_Submissions_SubmissionId">
+          <End Role="Submissions" Type="Self.Submission" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TestRuns" Type="Self.TestRun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Submissions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TestRuns">
+              <PropertyRef Name="SubmissionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_TestRuns_dbo_Tests_TestId">
+          <End Role="Tests" Type="Self.Test" Multiplicity="1" />
+          <End Role="TestRuns" Type="Self.TestRun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TestRuns">
+              <PropertyRef Name="TestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+        </Association>
+        <Association Name="SubmissionTypeContests">
+          <End Role="Contests" Type="Self.Contest" Multiplicity="*" />
+          <End Role="SubmissionTypes" Type="Self.SubmissionType" Multiplicity="*" />
+        </Association>
+        <Association Name="TagProblems">
+          <End Role="Problems" Type="Self.Problem" Multiplicity="*" />
+          <End Role="Tags" Type="Self.Tag" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="OnlineJudgeSystemEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+          <EntitySet Name="AccessLogs" EntityType="Self.AccessLog" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+          <EntitySet Name="Checkers" EntityType="Self.Checker" />
+          <EntitySet Name="ContestCategories" EntityType="Self.ContestCategory" />
+          <EntitySet Name="ContestQuestionAnswers" EntityType="Self.ContestQuestionAnswer" />
+          <EntitySet Name="ContestQuestions" EntityType="Self.ContestQuestion" />
+          <EntitySet Name="Contests" EntityType="Self.Contest" />
+          <EntitySet Name="Events" EntityType="Self.Event" />
+          <EntitySet Name="FeedbackReports" EntityType="Self.FeedbackReport" />
+          <EntitySet Name="News" EntityType="Self.News" />
+          <EntitySet Name="ParticipantAnswers" EntityType="Self.ParticipantAnswer" />
+          <EntitySet Name="Participants" EntityType="Self.Participant" />
+          <EntitySet Name="ProblemResources" EntityType="Self.ProblemResource" />
+          <EntitySet Name="Problems" EntityType="Self.Problem" />
+          <EntitySet Name="Settings" EntityType="Self.Setting" />
+          <EntitySet Name="SourceCodes" EntityType="Self.SourceCode" />
+          <EntitySet Name="Submissions" EntityType="Self.Submission" />
+          <EntitySet Name="SubmissionTypes" EntityType="Self.SubmissionType" />
+          <EntitySet Name="Tags" EntityType="Self.Tag" />
+          <EntitySet Name="TestRuns" EntityType="Self.TestRun" />
+          <EntitySet Name="Tests" EntityType="Self.Test" />
+          <AssociationSet Name="FK_dbo_AccessLogs_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AccessLogs_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AccessLogs" EntitySet="AccessLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_FeedbackReports_dbo_AspNetUsers_User_Id" Association="Self.FK_dbo_FeedbackReports_dbo_AspNetUsers_User_Id">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="FeedbackReports" EntitySet="FeedbackReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Participants_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_Participants_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="Participants" EntitySet="Participants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_SourceCodes_dbo_AspNetUsers_AuthorId" Association="Self.FK_dbo_SourceCodes_dbo_AspNetUsers_AuthorId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="SourceCodes" EntitySet="SourceCodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Problems_dbo_Checkers_CheckerId" Association="Self.FK_dbo_Problems_dbo_Checkers_CheckerId">
+            <End Role="Checkers" EntitySet="Checkers" />
+            <End Role="Problems" EntitySet="Problems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ContestCategories_dbo_ContestCategories_ParentId" Association="Self.FK_dbo_ContestCategories_dbo_ContestCategories_ParentId">
+            <End Role="ContestCategories" EntitySet="ContestCategories" />
+            <End Role="ContestCategories1" EntitySet="ContestCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Contests_dbo_ContestCategories_CategoryId" Association="Self.FK_dbo_Contests_dbo_ContestCategories_CategoryId">
+            <End Role="ContestCategories" EntitySet="ContestCategories" />
+            <End Role="Contests" EntitySet="Contests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ContestQuestionAnswers_dbo_ContestQuestions_QuestionId" Association="Self.FK_dbo_ContestQuestionAnswers_dbo_ContestQuestions_QuestionId">
+            <End Role="ContestQuestions" EntitySet="ContestQuestions" />
+            <End Role="ContestQuestionAnswers" EntitySet="ContestQuestionAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ContestQuestions_dbo_Contests_ContestId" Association="Self.FK_dbo_ContestQuestions_dbo_Contests_ContestId">
+            <End Role="Contests" EntitySet="Contests" />
+            <End Role="ContestQuestions" EntitySet="ContestQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ParticipantAnswers_dbo_ContestQuestions_ContestQuestionId" Association="Self.FK_dbo_ParticipantAnswers_dbo_ContestQuestions_ContestQuestionId">
+            <End Role="ContestQuestions" EntitySet="ContestQuestions" />
+            <End Role="ParticipantAnswers" EntitySet="ParticipantAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Participants_dbo_Contests_ContestId" Association="Self.FK_dbo_Participants_dbo_Contests_ContestId">
+            <End Role="Contests" EntitySet="Contests" />
+            <End Role="Participants" EntitySet="Participants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Problems_dbo_Contests_ContestId" Association="Self.FK_dbo_Problems_dbo_Contests_ContestId">
+            <End Role="Contests" EntitySet="Contests" />
+            <End Role="Problems" EntitySet="Problems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ParticipantAnswers_dbo_Participants_ParticipantId" Association="Self.FK_dbo_ParticipantAnswers_dbo_Participants_ParticipantId">
+            <End Role="Participants" EntitySet="Participants" />
+            <End Role="ParticipantAnswers" EntitySet="ParticipantAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Submissions_dbo_Participants_ParticipantId" Association="Self.FK_dbo_Submissions_dbo_Participants_ParticipantId">
+            <End Role="Participants" EntitySet="Participants" />
+            <End Role="Submissions" EntitySet="Submissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ProblemResources_dbo_Problems_ProblemId" Association="Self.FK_dbo_ProblemResources_dbo_Problems_ProblemId">
+            <End Role="Problems" EntitySet="Problems" />
+            <End Role="ProblemResources" EntitySet="ProblemResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_SourceCodes_dbo_Problems_ProblemId" Association="Self.FK_dbo_SourceCodes_dbo_Problems_ProblemId">
+            <End Role="Problems" EntitySet="Problems" />
+            <End Role="SourceCodes" EntitySet="SourceCodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Submissions_dbo_Problems_ProblemId" Association="Self.FK_dbo_Submissions_dbo_Problems_ProblemId">
+            <End Role="Problems" EntitySet="Problems" />
+            <End Role="Submissions" EntitySet="Submissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Tests_dbo_Problems_ProblemId" Association="Self.FK_dbo_Tests_dbo_Problems_ProblemId">
+            <End Role="Problems" EntitySet="Problems" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Submissions_dbo_SubmissionTypes_SubmissionTypeId" Association="Self.FK_dbo_Submissions_dbo_SubmissionTypes_SubmissionTypeId">
+            <End Role="SubmissionTypes" EntitySet="SubmissionTypes" />
+            <End Role="Submissions" EntitySet="Submissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_TestRuns_dbo_Submissions_SubmissionId" Association="Self.FK_dbo_TestRuns_dbo_Submissions_SubmissionId">
+            <End Role="Submissions" EntitySet="Submissions" />
+            <End Role="TestRuns" EntitySet="TestRuns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_TestRuns_dbo_Tests_TestId" Association="Self.FK_dbo_TestRuns_dbo_Tests_TestId">
+            <End Role="Tests" EntitySet="Tests" />
+            <End Role="TestRuns" EntitySet="TestRuns" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <AssociationSet Name="SubmissionTypeContests" Association="Self.SubmissionTypeContests">
+            <End Role="Contests" EntitySet="Contests" />
+            <End Role="SubmissionTypes" EntitySet="SubmissionTypes" />
+          </AssociationSet>
+          <AssociationSet Name="TagProblems" Association="Self.TagProblems">
+            <End Role="Problems" EntitySet="Problems" />
+            <End Role="Tags" EntitySet="Tags" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OnlineJudgeSystemModelStoreContainer" CdmEntityContainer="OnlineJudgeSystemEntities">
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccessLogs">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.AccessLog">
+              <MappingFragment StoreEntitySet="AccessLogs">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+                <ScalarProperty Name="RequestType" ColumnName="RequestType" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="PostParams" ColumnName="PostParams" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.AspNetRole">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.AspNetUserClaim">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+                <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.AspNetUserLogin">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.AspNetUser">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="IsGhostUser" ColumnName="IsGhostUser" />
+                <ScalarProperty Name="OldId" ColumnName="OldId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="EducationalInstitution" ColumnName="EducationalInstitution" />
+                <ScalarProperty Name="FacultyNumber" ColumnName="FacultyNumber" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="ForgottenPasswordToken" ColumnName="ForgottenPasswordToken" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="Discriminator" ColumnName="Discriminator" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Checkers">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.Checker">
+              <MappingFragment StoreEntitySet="Checkers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DllFile" ColumnName="DllFile" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="Parameter" ColumnName="Parameter" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContestCategories">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.ContestCategory">
+              <MappingFragment StoreEntitySet="ContestCategories">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContestQuestionAnswers">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.ContestQuestionAnswer">
+              <MappingFragment StoreEntitySet="ContestQuestionAnswers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContestQuestions">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.ContestQuestion">
+              <MappingFragment StoreEntitySet="ContestQuestions">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ContestId" ColumnName="ContestId" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="AskOfficialParticipants" ColumnName="AskOfficialParticipants" />
+                <ScalarProperty Name="AskPracticeParticipants" ColumnName="AskPracticeParticipants" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="RegularExpressionValidation" ColumnName="RegularExpressionValidation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contests">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.Contest">
+              <MappingFragment StoreEntitySet="Contests">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OldId" ColumnName="OldId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="ContestPassword" ColumnName="ContestPassword" />
+                <ScalarProperty Name="PracticePassword" ColumnName="PracticePassword" />
+                <ScalarProperty Name="PracticeStartTime" ColumnName="PracticeStartTime" />
+                <ScalarProperty Name="PracticeEndTime" ColumnName="PracticeEndTime" />
+                <ScalarProperty Name="LimitBetweenSubmissions" ColumnName="LimitBetweenSubmissions" />
+                <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Events">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.Event">
+              <MappingFragment StoreEntitySet="Events">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FeedbackReports">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.FeedbackReport">
+              <MappingFragment StoreEntitySet="FeedbackReports">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="IsFixed" ColumnName="IsFixed" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.News">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ParticipantAnswers">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.ParticipantAnswer">
+              <MappingFragment StoreEntitySet="ParticipantAnswers">
+                <ScalarProperty Name="ParticipantId" ColumnName="ParticipantId" />
+                <ScalarProperty Name="ContestQuestionId" ColumnName="ContestQuestionId" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Participants">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.Participant">
+              <MappingFragment StoreEntitySet="Participants">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OldId" ColumnName="OldId" />
+                <ScalarProperty Name="ContestId" ColumnName="ContestId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="IsOfficial" ColumnName="IsOfficial" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProblemResources">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.ProblemResource">
+              <MappingFragment StoreEntitySet="ProblemResources">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ProblemId" ColumnName="ProblemId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="File" ColumnName="File" />
+                <ScalarProperty Name="FileExtension" ColumnName="FileExtension" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Problems">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.Problem">
+              <MappingFragment StoreEntitySet="Problems">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OldId" ColumnName="OldId" />
+                <ScalarProperty Name="ContestId" ColumnName="ContestId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="MaximumPoints" ColumnName="MaximumPoints" />
+                <ScalarProperty Name="TimeLimit" ColumnName="TimeLimit" />
+                <ScalarProperty Name="MemoryLimit" ColumnName="MemoryLimit" />
+                <ScalarProperty Name="SourceCodeSizeLimit" ColumnName="SourceCodeSizeLimit" />
+                <ScalarProperty Name="CheckerId" ColumnName="CheckerId" />
+                <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+                <ScalarProperty Name="ShowResults" ColumnName="ShowResults" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ShowDetailedFeedback" ColumnName="ShowDetailedFeedback" />
+                <ScalarProperty Name="SolutionSkeleton" ColumnName="SolutionSkeleton" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.Setting">
+              <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SourceCodes">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.SourceCode">
+              <MappingFragment StoreEntitySet="SourceCodes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AuthorId" ColumnName="AuthorId" />
+                <ScalarProperty Name="ProblemId" ColumnName="ProblemId" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="IsPublic" ColumnName="IsPublic" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Submissions">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.Submission">
+              <MappingFragment StoreEntitySet="Submissions">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ParticipantId" ColumnName="ParticipantId" />
+                <ScalarProperty Name="ProblemId" ColumnName="ProblemId" />
+                <ScalarProperty Name="SubmissionTypeId" ColumnName="SubmissionTypeId" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="IsCompiledSuccessfully" ColumnName="IsCompiledSuccessfully" />
+                <ScalarProperty Name="CompilerComment" ColumnName="CompilerComment" />
+                <ScalarProperty Name="Processed" ColumnName="Processed" />
+                <ScalarProperty Name="Processing" ColumnName="Processing" />
+                <ScalarProperty Name="ProcessingComment" ColumnName="ProcessingComment" />
+                <ScalarProperty Name="Points" ColumnName="Points" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="FileExtension" ColumnName="FileExtension" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+                <ScalarProperty Name="SolutionSkeleton" ColumnName="SolutionSkeleton" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubmissionTypes">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.SubmissionType">
+              <MappingFragment StoreEntitySet="SubmissionTypes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsSelectedByDefault" ColumnName="IsSelectedByDefault" />
+                <ScalarProperty Name="ExecutionStrategyType" ColumnName="ExecutionStrategyType" />
+                <ScalarProperty Name="CompilerType" ColumnName="CompilerType" />
+                <ScalarProperty Name="AdditionalCompilerArguments" ColumnName="AdditionalCompilerArguments" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="AllowBinaryFilesUpload" ColumnName="AllowBinaryFilesUpload" />
+                <ScalarProperty Name="AllowedFileExtensions" ColumnName="AllowedFileExtensions" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tags">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.Tag">
+              <MappingFragment StoreEntitySet="Tags">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ForegroundColor" ColumnName="ForegroundColor" />
+                <ScalarProperty Name="BackgroundColor" ColumnName="BackgroundColor" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TestRuns">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.TestRun">
+              <MappingFragment StoreEntitySet="TestRuns">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SubmissionId" ColumnName="SubmissionId" />
+                <ScalarProperty Name="TestId" ColumnName="TestId" />
+                <ScalarProperty Name="TimeUsed" ColumnName="TimeUsed" />
+                <ScalarProperty Name="MemoryUsed" ColumnName="MemoryUsed" />
+                <ScalarProperty Name="ResultType" ColumnName="ResultType" />
+                <ScalarProperty Name="ExecutionComment" ColumnName="ExecutionComment" />
+                <ScalarProperty Name="CheckerComment" ColumnName="CheckerComment" />
+                <ScalarProperty Name="ExpectedOutputFragment" ColumnName="ExpectedOutputFragment" />
+                <ScalarProperty Name="UserOutputFragment" ColumnName="UserOutputFragment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tests">
+            <EntityTypeMapping TypeName="OnlineJudgeSystemModel.Test">
+              <MappingFragment StoreEntitySet="Tests">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ProblemId" ColumnName="ProblemId" />
+                <ScalarProperty Name="InputData" ColumnName="InputData" />
+                <ScalarProperty Name="OutputData" ColumnName="OutputData" />
+                <ScalarProperty Name="IsTrialTest" ColumnName="IsTrialTest" />
+                <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AspNetUserRoles" TypeName="OnlineJudgeSystemModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+            <EndProperty Name="AspNetRoles">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="AspNetUsers">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="SubmissionTypeContests" TypeName="OnlineJudgeSystemModel.SubmissionTypeContests" StoreEntitySet="SubmissionTypeContests">
+            <EndProperty Name="Contests">
+              <ScalarProperty Name="Id" ColumnName="Contest_Id" />
+            </EndProperty>
+            <EndProperty Name="SubmissionTypes">
+              <ScalarProperty Name="Id" ColumnName="SubmissionType_Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="TagProblems" TypeName="OnlineJudgeSystemModel.TagProblems" StoreEntitySet="TagProblems">
+            <EndProperty Name="Problems">
+              <ScalarProperty Name="Id" ColumnName="Problem_Id" />
+            </EndProperty>
+            <EndProperty Name="Tags">
+              <ScalarProperty Name="Id" ColumnName="Tag_Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

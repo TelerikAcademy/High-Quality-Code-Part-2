@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="59653d6a992b4b3280617a2288bee663" Name="Diagram1">
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.C__MigrationHistory" Width="1.5" PointX="2.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.AccessLog" Width="1.5" PointX="6" PointY="42.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.AspNetRole" Width="1.5" PointX="1.5" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.AspNetUserClaim" Width="1.5" PointX="6" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.AspNetUserLogin" Width="1.5" PointX="6" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.AspNetUser" Width="1.5" PointX="3.75" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.Checker" Width="1.5" PointX="0.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.ContestCategory" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.ContestQuestionAnswer" Width="1.5" PointX="5.25" PointY="39.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.ContestQuestion" Width="1.5" PointX="3" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.Contest" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.Event" Width="1.5" PointX="4.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.FeedbackReport" Width="1.5" PointX="6" PointY="51.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.News" Width="1.5" PointX="6.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.ParticipantAnswer" Width="1.5" PointX="8.25" PointY="36.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.Participant" Width="1.5" PointX="6" PointY="32.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.ProblemResource" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.Problem" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.Setting" Width="1.5" PointX="7.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.SourceCode" Width="1.5" PointX="5.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.Submission" Width="1.5" PointX="8.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.SubmissionType" Width="1.5" PointX="6" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.Tag" Width="1.5" PointX="5.25" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.TestRun" Width="1.5" PointX="10.5" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineJudgeSystemModel.Test" Width="1.5" PointX="5.25" PointY="27" IsExpanded="true" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_AccessLogs_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_FeedbackReports_dbo_AspNetUsers_User_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_Participants_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_SourceCodes_dbo_AspNetUsers_AuthorId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_Problems_dbo_Checkers_CheckerId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_ContestCategories_dbo_ContestCategories_ParentId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_Contests_dbo_ContestCategories_CategoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_ContestQuestionAnswers_dbo_ContestQuestions_QuestionId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_ContestQuestions_dbo_Contests_ContestId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_ParticipantAnswers_dbo_ContestQuestions_ContestQuestionId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_Participants_dbo_Contests_ContestId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_Problems_dbo_Contests_ContestId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_ParticipantAnswers_dbo_Participants_ParticipantId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_Submissions_dbo_Participants_ParticipantId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_ProblemResources_dbo_Problems_ProblemId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_SourceCodes_dbo_Problems_ProblemId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_Submissions_dbo_Problems_ProblemId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_Tests_dbo_Problems_ProblemId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_Submissions_dbo_SubmissionTypes_SubmissionTypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_TestRuns_dbo_Submissions_SubmissionId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.FK_dbo_TestRuns_dbo_Tests_TestId" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.AspNetUserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.SubmissionTypeContests" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineJudgeSystemModel.TagProblems" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
