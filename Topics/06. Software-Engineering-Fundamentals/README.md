@@ -16,33 +16,34 @@
 <!-- section start -->
 <!-- attr: { id:'', showInPresentation:true, hasScriptWrapper:true } -->
 # Table of Contents
-- Software engineering overview
-  - Requirements
-  - Design
-  - Construction
-  - Testing
-  - Project management
-- Development methodologies overview
-  - The waterfall development process
-  - Heavyweight methodologies
-  - Agile methodologies, SCRUM and XP
+- [Software engineering overview](#overview)
+  - [Requirements](#requirements)
+  - [Design](#design)
+  - [Construction](#construction)
+  - [Testing](#testing)
+  - [Project management](#pm)
+- [Development methodologies overview](#methodologies)
+  - [The waterfall development process](#waterfallProcess)
+  - [Heavyweight methodologies](#heavyweightMethodologies)
+  - [Agile methodologies, SCRUM and XP](#agile)
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic02.png" style="top:21.56%; left:70.17%; width:35.26%; z-index:-1" /> -->
 
 
 
 
 <!-- section start -->
-<!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Software Engineering -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic03.png" style="top:14.99%; left:19.65%; width:67.88%; z-index:-1" /> -->
+<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # Software Engineering
+## Requirements, Design, Construction, Testing -->
 
+<!-- attr: { id:'overview', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="overview"></a>What is Software Engineering?  
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# What is Software Engineering?
-
-```cs
-Software engineering is the application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software.
-
+```md
+Software engineering is the application of a systematic,
+disciplined, quantifiable approach to the development,
+operation, and maintenance of software.
 ```
 
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic04.png" style="top:60.06%; left:10.37%; width:26.56%; z-index:-1" /> -->
@@ -59,6 +60,7 @@ Software engineering is the application of a systematic, disciplined, quantifiab
     - Software testing
     - Software maintenance tasks
     - Software project management
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic06.png" style="top:43.20%; left:76.26%; width:27.77%; z-index:-1" /> -->
 
 
@@ -79,21 +81,18 @@ Software engineering is the application of a systematic, disciplined, quantifiab
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Software Requirements -->
 
-```cs
-Functional & Non-functionalRequirements, SRS, User Story Cards
-```
-
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic07.png" style="top:38.29%; left:29.79%; width:49.74%; z-index:-1" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Software Requirements
+<!-- attr: { id:'requirements', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="requirements"></a>Software Requirements
 - **Software requirements** define the functionality of the system
   - Answer the question "what?", not "how?"
   - Define constraints on the system
 - Two kinds of requirements
   - **Functional** requirements
-  - **Non-functional**requirements
+  - **Non-functional** requirements
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic08.png" style="top:50.63%; left:75.79%; width:28.20%; z-index:-1" /> -->
 
 
@@ -102,24 +101,25 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
 - **Requirements analysis** starts from a vision about the system
   - Customers don't know what they need!
   - Requirements come roughly and are specified and extended iteratively
-- The outcome is the **Software Requirements Specification (SRS****)** or set of **User Stories**
+- The outcome is the **Software Requirements Specification (SRS)** or set of **User Stories**
 - **Prototyping** is often used, especially for the user interface (UI)
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Software Requirements Specification (S -->
-- The **Software Requirements Specification (SRS)**is a formal requirements document
+<!-- # Software Requirements Specification (SRS) -->
+- The **Software Requirements Specification (SRS)** is a formal requirements document
 - It describes in details:
   - Functional requirements
     - Business processes
     - Actors and use-cases
   - Non-functional requirements
     - E.g. performance, scalability, constraints, etc.
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic09.png" style="top:33.01%; left:75.79%; width:25.56%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Agile Requirementsand User Stories
+# Agile Requirements and User Stories
 - Requirements specifications are too heavy
   - Does not work well in dynamic projects that change their requirements every day
 - Agile development needs **agile requirements**
@@ -140,19 +140,20 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
   - **Goal** (what?, why?)
   - Other info
     - **Owner, estimate, …**
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic10.png" style="top:44.08%; left:56.25%; width:45.74%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # User Story – _Example_
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic11.png" style="top:14.93%; left:19.65%; width:68.76%; z-index:-1" /> -->
+<img class="slide-image" showInPresentation="true" src="imgs\pic11.png" style="top:14.93%; left:19.65%; width:68.76%; z-index:-1" />
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Software Requirements
 - It is always hard to describe and document the requirements in comprehensive way
   - Good requirements save time and money
-- Requirements **always change**during the project!
+- Requirements **always change** during the project!
   - Good requirements reduces the changes
   - Prototypes significantly reduce changes
   - Agile methodologies are flexible to changes
@@ -160,38 +161,35 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
 
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
-# Software Requirements Specifications (SRS), User Stories and UI Prototypes
-## [Demo]()
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic12.png" style="top:9.70%; left:33.69%; width:42.31%; z-index:-1" /> -->
-
-
+<!-- # Software Requirements Specifications (SRS), User Stories and UI Prototypes
+## [Demo]() -->
 
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Software Architecture and Software Design -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic13.png" style="top:12.34%; left:29.01%; width:49.48%; z-index:-1" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Software Architecture and Software Design
+<!-- attr: { id:'design', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="design"></a>Software Architecture and Software Design
 - **Software design** is a technical description (blueprints) about how the system will implement the requirements
 - The **system architecture** describes:
   - How the system will be decomposed into subsystems (modules)
   - Responsibilities of each module
   - Interaction between the modules
   - Platforms and technologies
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic14.png" style="top:50.25%; left:87.34%; width:18.62%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# System ArchitectureDiagram – _Example_
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic15.png" style="top:14.99%; left:19.23%; width:69.55%; z-index:-1" /> -->
+# System Architecture Diagram – _Example_
+<img class="slide-image" showInPresentation="true" src="imgs\pic15.png" style="top:14.99%; left:19.23%; width:69.55%; z-index:-1" />
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Software Architecture Diagram – _Example_
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic16.png" style="top:14.99%; left:14.01%; width:79.39%; z-index:-1" /> -->
+<img class="slide-image" showInPresentation="true" src="imgs\pic16.png" style="top:14.99%; left:14.01%; width:79.39%; z-index:-1" />
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -206,8 +204,8 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Software Design Document (S -->
-- The **Software Design Document (SDD****)**
+<!-- # Software Design Document (SDD) -->
+- The **Software Design Document (SDD)**
   - Formal description of the architecture and design of the system
 - It contains:
   - Architectural design
@@ -216,27 +214,27 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
     - Process design (diagrams)
     - Data design (E/R diagram)
     - Interfaces design (class diagram)
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic17.png" style="top:52.89%; left:87.95%; width:16.64%; z-index:-1" /> -->
 
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
-# Software Design Document
-## [Demo]()
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic18.png" style="top:17.36%; left:12.16%; width:82.94%; z-index:-1" /> -->
+<!--# Software Design Document
+## [Demo]()-->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic18.png" style="top:53%; left:12.16%; width:82.94%; z-index:-1" /> -->
 
 
 
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Software Construction -->
-- Implementation, Unit Testing, Debugging, Integration
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic19.png" style="top:13.86%; left:24.33%; width:58.05%; z-index:-1" /> -->
+<!-- # Software Construction
+## Implementation, Unit Testing, Debugging, Integration -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Software Construction
-- During the **software construction**phase developers create the software
+<!-- attr: { id:'construction', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="construction"></a>Software Construction
+- During the **software construction** phase developers create the software
   - Sometimes called **implementation** phase
 - It includes:
   - Internal method design
@@ -244,6 +242,7 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
   - Writing unit tests (optionally)
   - Testing and debugging
   - Integration
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic20.png" style="top:53.77%; left:74.82%; width:29.73%; z-index:-1" /> -->
 
 
@@ -251,10 +250,11 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
 # Writing the Code
 - **Coding** is the process of writing the programming code (the source code)
   - The code strictly follows the design
-  - Developers perform **internal method****design**as part of coding
-- The **source code**is the output ofthe software construction process
+  - Developers perform **internal method design** as part of coding
+- The **source code** is the output ofthe software construction process
   - Written by developers
   - Can include unit tests
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic21.png" style="top:47.60%; left:85.73%; width:19.04%; z-index:-1" /> -->
 
 
@@ -264,10 +264,11 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
   - Aims to identify defects (bugs)
 - Developers test the code after writing it
   - At least run it to see the results
-  - **Unit testing**works better
+  - **Unit testing** works better
     - Units tests can be repeated many times
 - System testing is done by the QA engineers
   - Unit testing is done by developers
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic22.png" style="top:39.67%; left:89.41%; width:16.26%; z-index:-1" /> -->
 
 
@@ -281,6 +282,7 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
     - Identify the exact place in the code causing it
   - Fix the defect
   - Test to check if the fix is working correctly
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic23.png" style="top:22.04%; left:74.00%; width:29.90%; z-index:-1" /> -->
 
 
@@ -290,8 +292,9 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
   - Compile, run and deploy the modules as a single system
   - Test to identify defects
 - Integration strategies
-  - Big bang, top-down and 		          bottom-up
+  - Big bang, top-down and bottom-up
   - Continuous integration
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic24.png" style="top:30.85%; left:70.93%; width:30.36%; z-index:-1" /> -->
 
 
@@ -302,7 +305,7 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
   - The important decisions are taken during the requirements analysis and design
   - Documentation, testing, integration, maintenance, etc. are often disparaged
 - Software engineering is not just coding!
-  - **Programmer**!= **software engineer**
+  - **Programmer** != **software engineer**
 
 
 
@@ -310,11 +313,10 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Software Verification and Testing -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic25.png" style="top:12.26%; left:35.56%; width:37.11%; z-index:-1" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Software Verification
+<!-- attr: { id:'testing', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="testing"></a>Software Verification
 - What is **software verification**?
   - It checks whether the developed software conforms to the requirements
   - Performed by the Software Quality Assurance Engineers (QA engineers)
@@ -323,6 +325,7 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
   - Different kinds of **testing**
 - Cannot certify absence of defects!
   - Can only decrease their rates
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic26.png" style="top:49.37%; left:82.34%; width:22.04%; z-index:-1" /> -->
 
 
@@ -342,47 +345,49 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
   - Establish test strategy and test plan
   - During requirements and design phases
 - Test development
-  - Test procedures, test scenarios, 			 test cases, test scripts
+  - Test procedures, test scenarios, test cases, test scripts
 - Test execution
 - Test reporting
 - Retesting the defects
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic27.png" style="top:41.43%; left:80.86%; width:23.35%; z-index:-1" /> -->
+
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic27.png" style="top:50%; left:80.86%; width:23.35%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Test Plan and Test Cases
-- The **test plan**is a formal document that describes how tests will be performed
+- The **test plan** is a formal document that describes how tests will be performed
   - List of test activities to be performed to ensure meeting the requirements
   - Features to be tested, testing approach, schedule, acceptance criteria
 - Test scenarios and test cases
-  - **Test scenarios**– stories to be tested
-  - **Test cases**– tests of single function
+  - **Test scenarios** – stories to be tested
+  - **Test cases** – tests of single function
 
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
-# Test Plans and Test Cases
-## [Demo]()
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic28.png" style="top:15.87%; left:17.78%; width:32.62%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic29.png" style="top:15.87%; left:59.88%; width:32.62%; z-index:-1" /> -->
-
+<!-- # Test Plans and Test Cases
+## [Demo]() -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic28.png" style="top:45.87%; left:7.78%; width:32.62%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic29.png" style="top:45.87%; left:60%; width:32.62%; z-index:-1" /> -->
 
 
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Software Project Management -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic30.png" style="top:14.10%; left:24.80%; width:57.25%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic30.png" style="top:53.10%; left:24.80%; width:57.25%; z-index:-1" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# What is Project Management?
-- **Project management**is the discipline of organizing and managing work and resources in order to successfully complete a project
+<!-- attr: { id:'pm', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="pm"></a>What is Project Management?
+- **Project management** is the discipline of organizing and managing work and resources in order to successfully complete a project
 - Successfully means within defined scope, quality, time and cost constraints
 - Project constraints:
-- Scope
-- Time
-- Cost
-- Quality
+	- Scope
+	- Time
+	- Cost
+	- Quality
+
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic52.png" style="top:53%; left:45%; width:40%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -397,7 +402,7 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # What is Project Plan?
-- The **project plan**is a document that describes how the work on the project will be organized
+- The **project plan** is a document that describes how the work on the project will be organized
   - Contains tasks, resources, schedule, milestones, etc.
   - Tasks have start, end, assigned resources (team members), % complete, dependencies, nested tasks, cost, etc.
 - Project management tools simplify creating and monitoring project plans
@@ -405,21 +410,20 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Project Plan – _Example_
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic31.png" style="top:14.10%; left:4.42%; width:97.21%; z-index:-1" /> -->
+<img class="slide-image" showInPresentation="true" src="imgs\pic31.png" style="top:14.10%; left:4.42%; width:97.21%; z-index:-1" />
 
 
 
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Development Methodologies -->
-<!-- ## Waterfall, Scrum, Lean Development, Kanban, Extreme Programming -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic32.png" style="top:16.60%; left:59.88%; width:40.30%; z-index:-1" /> -->
+<!-- # Development Methodologies
+## Waterfall, Scrum, Lean Development, Kanban, Extreme Programming -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# What is a Development Methodology?
-- A **development methodology**is a set of practices and procedures for organizing the software development process
+<!-- attr: { id:'methodologies', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="methodologies"></a>What is a Development Methodology?
+- A **development methodology** is a set of practices and procedures for organizing the software development process
   - A set of rules that developers have to follow
   - A set of conventions the organization decides to follow
   - A systematical, engineering approach for organizing and managing software projects
@@ -433,50 +437,28 @@ Functional & Non-functionalRequirements, SRS, User Story Cards
   - Rational Unified Process (RUP)
   - Microsoft Solutions Framework (MSF)
 - Modern development methodologies
-  - **Agile development**processes
+  - **Agile development** processes
   - Scrum, Kanban, Lean Development, Extreme Programming (XP), etc.
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic33.png" style="top:13.05%; left:78.20%; width:27.70%; z-index:-1" /> -->
 
 
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# The Waterfall Process
+<!-- attr: { id:'waterfallProcess', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="waterfallProcess"></a>The Waterfall Process
 - The waterfall development process:
 
-```cs
-Software
-Requirements
-```
-
+<img class="slide-image" showInPresentation="true" src="imgs\pic53.png" style="top:23.05%; left:20%; width:80%; z-index:-1" />
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic37.png" style="top:12.34%; left:93.14%; width:14.10%; z-index:-1" /> -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic38.png" style="top:52.89%; left:4.68%; width:14.19%; z-index:-1" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Formal Methodologies
+<!-- attr: { id:'heavyweightMethodologies', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="heavyweightMethodologies"></a>Formal Methodologies
+- Formal methodologies are heavyweight!
 
-```cs
-Formal methodologies are heavyweight!
-```
-
-- Preliminary
-- Design
-- Document
-- UI Design Document
-- Test
-- Plan
-- Software
-- Requirements
-- Specification
-- Design Review
-- Operating
-- Instructions
-- Code Review
-- Final
-- Design
-- Prelim.
-- Review
+<img class="slide-image" showInPresentation="true" src="imgs\pic54.png" style="top:22.34%; left:3.14%; width:94.10%; z-index:-1" />
 
 
 
@@ -484,16 +466,16 @@ Formal methodologies are heavyweight!
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # Agile Development -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic39.png" style="top:36.52%; left:21.43%; width:63.74%; z-index:-1" /> -->
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic39.png" style="top:40%; left:21.43%; width:63.74%; z-index:-1" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# The Agile Manifesto
-  - “Our highest priority is to satisfy the
-  - customer through early and continuous
-  - delivery of valuable software“
-  -                             		
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic40.png" style="top:59.06%; left:7.49%; width:91.68%; z-index:-1" /> -->
+<!-- attr: { id:'agile', showInPresentation:true, hasScriptWrapper:true } -->
+# <a id="agile"></a>The Agile Manifesto
+“Our highest priority is to satisfy the
+customer through early and continuous
+delivery of valuable software“
+
+Manifesto for Agile
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -506,6 +488,7 @@ Formal methodologies are heavyweight!
   - **Individuals and interactions** over processes and tools
 - Adaptive
   - **Responding to change** over following a plan
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic41.png" style="top:14.10%; left:85.71%; width:19.39%; z-index:-1" /> -->
 
 
@@ -520,23 +503,14 @@ Formal methodologies are heavyweight!
 - Adaptive Software Development (ASD)
 - Dynamic System Development Model (DSDM)
 - Agile Unified Process (AUP)
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic42.png" style="top:14.99%; left:74.85%; width:27.71%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Extreme Programming:The 12 Key Practices
-- The Planning Game
-- Small Releases
-- Metaphor
-- Simple Design
-- Test-Driven Development
-- Refactoring
-- Pair Programming
-- Collective Ownership
-- Continuous Integration
-- 40-Hour Workweek
-- On-site Customer
-- Coding Standards
+
+<img class="slide-image" showInPresentation="true" src="imgs\pic55.png" style="top:19.67%; left:3.33%; width:80.67%; z-index:-1" />
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic43.png" style="top:19.67%; left:53.33%; width:50.67%; z-index:-1" /> -->
 
 
@@ -544,28 +518,30 @@ Formal methodologies are heavyweight!
 # Scrum
 - Scrum is an iterative incremental framework for managing complex projects
 - Scrum roles:
-  - **Scrum Master**– maintains the Scrum processes
-  - **Product Owner**– represents the stakeholders
+  - **Scrum Master** – maintains the Scrum processes
+  - **Product Owner** – represents the stakeholders
   - **Team** – a group of about 7 people
     - The team does the actual development: analysis, design, implementation, testing, etc.
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic44.png" style="top:23.80%; left:76.72%; width:26.57%; z-index:-1" /> -->
+
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic44.png" style="top:65.80%; left:76.72%; width:26.57%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Scrum Terminology
 - **Sprint**
-  - An iteration in the						 Scrum development
+  - An iteration in the Scrum development
   - Usually few weeks
 - **Product Backlog**
   - All features that have to be developed
 - **Sprint Backlog**
   - All features planned for the current sprint
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic45.png" style="top:14.65%; left:57.08%; width:46.94%; z-index:-1" /> -->
+
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic45.png" style="top:66%; left:57.08%; width:46.94%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # The Scrum Process Framework
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic46.png" style="top:15.87%; left:7.49%; width:91.68%; z-index:-1" /> -->
+<img class="slide-image" showInPresentation="true" src="imgs\pic46.png" style="top:15.87%; left:7.49%; width:91.68%; z-index:-1" />
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -578,6 +554,7 @@ Formal methodologies are heavyweight!
   - Timeboxed to 15 minutes
 - Sprint Review Meeting
   - Review the work completed / not completed
+
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic47.png" style="top:13.21%; left:86.08%; width:19.39%; z-index:-1" /> -->
 
 

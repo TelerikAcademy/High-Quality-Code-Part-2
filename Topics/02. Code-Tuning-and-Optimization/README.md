@@ -346,8 +346,8 @@ void SomeMethod() { … }
 ```
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
-<!--# Measuring Performance in C#-->
-<!--## [Demo]()-->
+<!--# Measuring Performance in C#
+## [Demo]()-->
 
 <!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
