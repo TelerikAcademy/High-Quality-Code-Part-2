@@ -1,0 +1,13 @@
+﻿Bottleneck description: --------------------
+#1: The WriteLine method in the Engine class (originally, now in ConsoleWriterProvider) was doing too many redundant things. Method simplified just to Console.WriteLine(parameter).
+
+
+Bug reports: --------------------
+Format: #Bug number - Class name - Bug description
+Example: #1 - PartnerBankingService - The variable "money" at line 36 overflows when you try to add more than 2.1 billion dollars.
+--------
+#1 - Grades enum - The grades from 1 to 8 are missing.
+#2 - CreateStudentCommand - The command does not implement ICommand, therefore cannot be found.
+#3 - TeacherAddMarkCommand - In the command, the parameters for teacher and student are swapped.
+#4 - StudentListMarks - The command does not return a proper message when there are no marks.
+#5 (Bonus) - RemoveTeacherCommand/RemoveStudentCommand - When trying to remove a student/teacher that does not exist, it returns a success message.
