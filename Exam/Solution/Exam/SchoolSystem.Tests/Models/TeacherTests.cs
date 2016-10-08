@@ -17,7 +17,7 @@ namespace SchoolSystem.Tests.Models
         {
             var expectedSubject = Subject.Bulgarian;
             var teacher = new Teacher("Pesho", "Peshov", expectedSubject);
-            Assert.That(teacher.Subject == expectedSubject);
+            Assert.AreEqual(expectedSubject, teacher.Subject);
         }
 
         [TestCase("P", "Goshev")]
@@ -45,8 +45,8 @@ namespace SchoolSystem.Tests.Models
 
             teacher.AddMark(student.Object, expectedValue);
 
-            Assert.That(student.Object.Marks.Single().Subject == expectedSubject);
-            Assert.That(student.Object.Marks.Single().Value == expectedValue);
+            Assert.AreEqual(expectedSubject, student.Object.Marks.Single().Subject);
+            Assert.AreEqual(expectedValue, student.Object.Marks.Single().Value);
         }
 
         [Test]

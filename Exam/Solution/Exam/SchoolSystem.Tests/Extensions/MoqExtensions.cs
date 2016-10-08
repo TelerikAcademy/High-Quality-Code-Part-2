@@ -11,6 +11,14 @@ namespace SchoolSystem.Tests.Extensions
             params TReturn[] args)
             where TSvc : class
         {
+            if (args.Length == 0)
+            {
+                mock.Setup(expression)
+                    .Returns(null);
+
+                return;
+            }
+
             var numCalls = 0;
 
             mock.Setup(expression)

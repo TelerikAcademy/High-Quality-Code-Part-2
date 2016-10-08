@@ -14,14 +14,15 @@ namespace SchoolSystem.Tests.Models
         {
             var expectedGrade = Grade.Fifth;
             var student = new Student("Pesho", "Peshov", expectedGrade);
-            Assert.That(student.Grade == expectedGrade);
+            Assert.AreEqual(expectedGrade, student.Grade);
         }
 
         [Test]
         public void Constructor_ShouldSetInstanceToMarksCollectionProperty_WhenInitialized()
         {
             var student = new Student("Pesho", "Peshov", Grade.Fifth);
-            Assert.That(student.Marks != null);
+            Assert.AreNotEqual(null, student.Marks);
+
         }
 
         [Test]
