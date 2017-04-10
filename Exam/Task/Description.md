@@ -105,6 +105,7 @@ You can also find them in the `Tests` folder.
 CreateStudent Pesho Peshev 11
 CreateStudent Gosho Peshev 9
 StudentListMarks 1
+End
 ```
 
 #### 01. Expected output
@@ -121,6 +122,7 @@ This student has no marks.
 CreateStudent Pesho Petrov 10
 CreateTeacher Gosho Vesheff 2
 TeacherAddMark 0 0 3
+End
 ```
 
 #### 02. Expected output
@@ -138,6 +140,7 @@ CreateStudent Pesho Petrov 6
 CreateStudent Gosho Petrov 6
 CreateTeacher Gosho Vesheff 2
 TeacherAddMark 0 1 3
+End
 ```
 
 #### 03. Expected output
@@ -166,6 +169,7 @@ RemoveStudent 0
 StudentListMarks 0
 StudentListMarks 1
 RemoveTeacher 1
+End
 ```
 
 #### 04. Expected output
