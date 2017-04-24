@@ -33,7 +33,6 @@
 - Code Profilers
 - Refactoring Tools
 - Continuous Integration Tools
-- Documentation Generators
 - Deployment in the Public Clouds
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic03.png" style="top:13.36%; left:78.71%; width:21.05%; z-index:-1; border:1px solid white; border-radius:5px;" /> -->
 
@@ -611,40 +610,6 @@ return ____;
   - TFS provides build-in continuous integration
 - AppVeyor
   - Cloud-based for .NET / example
-
-
-
-
-<!-- section start -->
-<!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Documentation Generators
-## Javadoc, Sandcastle, Doxygen, JSDoc -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic75.png" style="top:10%; left:35%; width:33.06%; z-index:-1; border: 1px solid white; border-radius:5px;" /> -->
-
-
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Documentation<br/> Frameworks
-- The best source code documentation is the code itself
-- Special types of comments are used in many platforms
-  - Used to document the code classes, methods, parameters, return types, exceptions, etc.
-  - Javadoc comments in Java
-  - XML documentation in .NET
-  - Doxygen-style documentation for C, C++, PHP, Python, Java, C#, etc.
-
-
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Documentation<br/> Generators
-- Javadoc
-  - Transforms Javadoc comments used in Java into HTML documentation
-- Sandcastle
-  - Transforms the XML comments used .NET into CHM, HTML, PDF and other formats
-- Doxygen
-  - Transforms Doxygen comments into HTML
-- JSDoc
-  - Javadoc cloning for JavaScript
-
-
-
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
