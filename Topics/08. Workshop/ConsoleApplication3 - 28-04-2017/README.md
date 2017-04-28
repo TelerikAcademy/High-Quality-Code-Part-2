@@ -1,5 +1,7 @@
 ![Telerik Academy](https://github.com/TelerikAcademy/Common/raw/master/logos/telerik-header-logo.png)
 
+# [Download zip](http://tinyurl.com/hqc2-workshop-2017)
+
 # School system
 
 High-Quallity Code - Part 2 Exam, 7 October 2016
