@@ -1,23 +1,19 @@
-﻿using System;
-using System.Diagnostics;
-using System.Linq;
+﻿using Bytes2you.Validation;
 
 class AssertionsDemo
 {
     static void Main()
     {
-        Debug.Assert(PerformAction(), "Could not perform action");
-
-        StudentGradesCalculator calc = new StudentGradesCalculator(new int[] { 6, 5, 5, 4, 6, 6, 5, 6 });
-        Console.WriteLine(calc.GetAverageStudentGrade());
-
-        calc = new StudentGradesCalculator(new int[] { });
-        Console.WriteLine(calc.GetAverageStudentGrade());
+        PerformAction(15);
     }
 
-    private static bool PerformAction()
+    private static bool PerformAction(int number)
     {
-        Console.WriteLine("Action performed.");
+        Guard.WhenArgument(number, "number")
+            .IsLessThan(0)
+            .IsGreaterThan(10)
+            .Throw();
+
         return true;
     }
 }
