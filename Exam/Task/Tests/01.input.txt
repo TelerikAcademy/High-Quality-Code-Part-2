@@ -1,3 +1,0 @@
-CreateStudent Pesho Peshev 11
-CreateStudent Gosho Peshev 9
-StudentListMarks 1

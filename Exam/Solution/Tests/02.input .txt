@@ -1,3 +1,0 @@
-CreateStudent Pesho Petrov 10
-CreateTeacher Gosho Vesheff 2
-TeacherAddMark 0 0 3
